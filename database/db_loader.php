@@ -1,6 +1,6 @@
 <?php
     // Call " include 'this php directory'; " and the "candidate table" for $table if you want to place it inside your code. 
-    // There is already some classes provided in the html element and it can already be accessed by your implemented .css to your php/html file
+    // There is already some classes provided in this html element and it can already be accessed by your implemented .css to your php/html file
 
     // This is not yet supported for governor and mayors database.
 

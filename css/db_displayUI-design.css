@@ -1,0 +1,77 @@
+/* ========== Elements ========== */
+
+html, body {
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+}
+
+h2, #panel_1, #panel_2 {
+    color: white;
+}
+
+input[type=text], input[type=number] {
+    width: 95%;
+}
+
+input[type=radio] {
+    width: 10%;
+}
+
+select, input[type=date] {
+    width: 97%;
+}
+
+textarea{
+    resize: none;
+    height: 70px;
+    width: 96%;
+}
+
+/* ========== Classes  ========== */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+.columns {
+    height: fit-content;
+    border-width: 10px; 
+    border-style: solid;
+    border-color: #171a18;
+}
+
+.cells {
+    border-style: solid;
+    border-width: 2px;
+    border-color: wheat;
+    padding: 10px;
+
+}
+
+/* ========== IDs ========== */
+
+#panel_1 {
+    position: fixed;
+    background-color: #418559;
+    width: 20%;
+    height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#panel_1 > form {
+    padding: 10px;
+}
+
+#panel_2 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    background-color: #171a18;
+    float: right;
+}

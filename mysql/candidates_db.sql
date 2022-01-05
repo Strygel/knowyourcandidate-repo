@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2021 at 01:51 PM
+-- Generation Time: Jan 05, 2022 at 02:39 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -97,7 +97,7 @@ CREATE TABLE `pres_candidates` (
 --
 
 INSERT INTO `pres_candidates` (`id`, `candidate`, `picture_dir`, `nickname`, `age`, `birthdate`, `hometown`, `honorary_degree`, `tertiary`, `political_background`, `stance_divorce`, `stance_death_penalty`, `stance_same_sex_marriage`) VALUES
-(1, 'Mark Pandan', '244401524_256796503030816_6999178073096241536_n.jpg', 'Mark', 20, '2001-09-24', 'Parañaque City', 'ASDF', 'ASDF', 'ASDF', 'Yes', 'No', 'Yes');
+(16, 'TEST', '../pictures/presidents/TEST-president.jpg', 'asdf', 123, '2022-01-18', 'asdf', 'asdf', 'asdf', 'asdf', 'Unknown', 'Unknown', 'Unknown');
 
 -- --------------------------------------------------------
 
@@ -157,7 +157,7 @@ ALTER TABLE `vcpres_candidates`
 -- AUTO_INCREMENT for table `governor_candidates`
 --
 ALTER TABLE `governor_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mayor_candidates`
@@ -169,7 +169,7 @@ ALTER TABLE `mayor_candidates`
 -- AUTO_INCREMENT for table `pres_candidates`
 --
 ALTER TABLE `pres_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `vcpres_candidates`

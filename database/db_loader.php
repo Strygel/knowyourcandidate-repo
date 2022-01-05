@@ -2,13 +2,46 @@
     // Call " include 'this php directory'; " and the "candidate table" for $table if you want to place it inside your code. 
     // There is already some classes provided in this html element and it can already be accessed by your implemented .css to your php/html file
 
-    // This is not yet supported for governor and mayors database.
-
     include 'db_connect.php';
     candidates_db();
 
-    $table = $_POST['table_selected'];
-    $sql = "SELECT * from $table";
+    $selections = array();
+    // Use the variables here that was placed inside the $_POST 
+    $selections[0] = isset($_POST['table_selected']);
+    $selections[1] = isset($_POST['regions']);
+    $selections[2] = isset($_POST['provinces']);
+    $selections[3] = isset($_POST['city_or_municipalities']);
+
+    switch ($selections) {
+        case ($selections[0] && $selections[1] && $selections[2] && $selections[3]): // For mayor_candidates database
+            $table = $_POST['table_selected'];
+            $regions = $_POST['regions'];
+            $provinces = $_POST['provinces'];
+            $city_or_municipalities = $_POST['city_or_municipalities'];
+
+            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' AND city_or_municipalities='$city_or_municipalities'";
+        break;
+
+        case ($selections[0] && $selections[1] && $selections[2]): // For governor_candidates database
+            $table = $_POST['table_selected'];
+            $regions = $_POST['regions'];
+            $provinces = $_POST['provinces'];
+
+            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces'";
+        break;
+
+        case ($selections[0] && $selections[1]):
+            $table = $_POST['table_selected'];
+            $regions = $_POST['regions'];
+
+            $sql = "SELECT * from $table WHERE regions='$regions'";
+        break;
+
+        case ($selections[0]): // For pres_candidates and vcpres_candidates database
+            $table = $_POST['table_selected'];
+            $sql = "SELECT * from $table";
+        break;
+    }
 
     if ($sql) {
         $query = mysqli_query(candidates_db(), $sql);
@@ -16,10 +49,9 @@
         
         foreach ($query as $rows)
         {
-            $imageURL = "../pictures/" . $rows[2];
 ?>  
-            <div class='columns'>
-                <div class='cells'>
+            <div class='cells'>
+                <div class='candidate_card'>
                     <p class="candidate_name"> Name:                  <?= $rows[1] ?>  </p>
                     <p class="information">    Nickname:              <?= $rows[3] ?>  </p>
                     <p class="information">    Age:                   <?= $rows[4] ?>  </p>
@@ -39,7 +71,7 @@
             }
             if (array_key_exists(14, $rows)) {
 ?>
-                    <p class="location">       Provinces:            <?= $rows[14] ?> </p>
+                    <p class="location">       Province:            <?= $rows[14] ?> </p>
 <?php
             }
             if (array_key_exists(15, $rows)) {
@@ -48,7 +80,7 @@
 <?php
             }
 ?>
-                    <img src='<?= $imageURL ?>' width='100' height='100'>
+                    <img src='<?= $rows[2] ?>' width='100' height='100'>
                 </div>
             </div>
 <?php

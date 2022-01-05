@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>KnowYourCandidate</title>
+        
         <script src="../js/jquery-3.6.0.min.js"></script>
+
+        <script src="../snippets/dropdown_formLoader.js"></script>
         <script src="../js/db_displayUI-script.js"></script>
+
         <link rel="stylesheet" href="../css/db_displayUI-design.css">
     </head>
     
@@ -15,28 +19,18 @@
             <form action="" method="POST"  enctype="multipart/form-data">
                 <label for="tables">Select a table:</label> <br>
                 <select name="tables" id="tables">
+                    <option value="" disabled selected>Select your option</option>
                     <option value="pres_candidates">pres_candidates</option>
                     <option value="vcpres_candidates">vcpres_candidates</option>
                     <option value="mayor_candidates">mayor_candidates</option>
                     <option value="governor_candidates">governor_candidates</option>
                 </select> <br> <br>
 
-                <label for="regions">Select a Region:</label> <br class='blank'>
-                <select name="regions" id="regions">
-                    <!-- options can be seen from '../database/db_dropdown/db_dropdown-Regions.php' -->
-                </select> <br class='blank'>
+                <!-- options can be seen from '../database/db_dropdown/db_dropdown-Regions.php' -->
 
-                <label for="provinces">Select a Province:</label> <br class='blank'>
-                <select name="provinces" id="provinces">
-                    <!-- options can be seen from '../database/db_dropdown/db_dropdown-Provinces.php' -->
-                </select> <br class='blank'>
+                <!-- options can be seen from '../database/db_dropdown/db_dropdown-Provinces.php' -->
 
-                <label for="city_or_municipalities">Select a city or municipality:</label> <br class='blank'>
-                    <!-- options can be seen from '../database/db_dropdown/db_dropdown-Municipalities.php' -->
-                <select name="city_or_municipalities" id="city_or_municipalities">
-
-                </select> <br class='blank'>
-                <br>
+                <!-- options can be seen from '../database/db_dropdown/db_dropdown-Municipalities.php' -->
 
                 <label for="candidate"> Candidate: </label> <br>
                 <input type='text' name="candidate" id="candidate" class="small_textbox" required> <br> <br>

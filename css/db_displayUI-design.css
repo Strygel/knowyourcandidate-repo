@@ -38,19 +38,18 @@ textarea{
     height: 100vh;
 }
 
-.columns {
+.cells {
     height: fit-content;
     border-width: 10px; 
     border-style: solid;
     border-color: #171a18;
 }
 
-.cells {
+.candidate_card {
     border-style: solid;
     border-width: 2px;
     border-color: wheat;
     padding: 10px;
-
 }
 
 /* ========== IDs ========== */

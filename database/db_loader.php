@@ -7,10 +7,10 @@
 
     $selections = array();
     // Use the variables here that was placed inside the $_POST 
-    $selections[0] = isset($_POST['table_selected']);
-    $selections[1] = isset($_POST['regions']);
-    $selections[2] = isset($_POST['provinces']);
-    $selections[3] = isset($_POST['city_or_municipalities']);
+    $selections[0] = isset($_POST['table_selected']) && !empty($_POST['table_selected']);
+    $selections[1] = isset($_POST['regions']) && !empty($_POST['regions']);
+    $selections[2] = isset($_POST['provinces']) && !empty($_POST['provinces']);
+    $selections[3] = isset($_POST['city_or_municipalities']) && !empty($_POST['city_or_municipalities']);
 
     switch ($selections) {
         case ($selections[0] && $selections[1] && $selections[2] && $selections[3]): // For mayor_candidates database
@@ -19,7 +19,7 @@
             $provinces = $_POST['provinces'];
             $city_or_municipalities = $_POST['city_or_municipalities'];
 
-            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' AND city_or_municipalities='$city_or_municipalities'";
+            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' AND city_or_municipalities='$city_or_municipalities' ORDER BY candidate";
         break;
 
         case ($selections[0] && $selections[1] && $selections[2]): // For governor_candidates database
@@ -27,19 +27,19 @@
             $regions = $_POST['regions'];
             $provinces = $_POST['provinces'];
 
-            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces'";
+            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' ORDER BY candidate";
         break;
 
         case ($selections[0] && $selections[1]):
             $table = $_POST['table_selected'];
             $regions = $_POST['regions'];
 
-            $sql = "SELECT * from $table WHERE regions='$regions'";
+            $sql = "SELECT * from $table WHERE regions='$regions' ORDER BY candidate";
         break;
 
         case ($selections[0]): // For pres_candidates and vcpres_candidates database
             $table = $_POST['table_selected'];
-            $sql = "SELECT * from $table";
+            $sql = "SELECT * from $table ORDER BY candidate";
         break;
     }
 
@@ -52,7 +52,7 @@
 ?>  
             <div class='cells'>
                 <div class='candidate_card'>
-                    <p class="candidate_name"> Name:                  <?= $rows[1] ?>  </p>
+                    <p class="candidate_name">                        <?= $rows[1] ?>  </p>
                     <p class="information">    Nickname:              <?= $rows[3] ?>  </p>
                     <p class="information">    Age:                   <?= $rows[4] ?>  </p>
                     <p class="information">    Birthdate:             <?= $rows[5] ?>  </p>

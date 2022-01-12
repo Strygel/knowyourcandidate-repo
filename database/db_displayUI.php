@@ -7,8 +7,8 @@
         
         <script src="../js/jquery-3.6.0.min.js"></script>
 
-        <script src="../snippets/dropdown_formLoader.js"></script>
         <script src="../js/db_displayUI-script.js"></script>
+        <script src="../snippets/dropdown_formLoader.js"></script>
 
         <link rel="stylesheet" href="../css/db_displayUI-design.css">
     </head>
@@ -16,10 +16,9 @@
     <body>
         <div id="panel_1" >
             <div class="header"><h2>Database Uploader</h2></div>
-            <form action="" method="POST"  enctype="multipart/form-data">
+            <form action="" id="my_form" method="POST"  enctype="multipart/form-data">
                 <label for="tables">Select a table:</label> <br>
                 <select name="tables" id="tables">
-                    <option value="" disabled selected>Select your option</option>
                     <option value="pres_candidates">pres_candidates</option>
                     <option value="vcpres_candidates">vcpres_candidates</option>
                     <option value="mayor_candidates">mayor_candidates</option>
@@ -76,10 +75,8 @@
                 <input type='radio' name='stance_same_sex_marriage' id='stance_same_sex_marriage' value="Unknown">Unknown</input> <br> <br>
 
                 <input type="submit" name="submit" id="submit">
-                <input type="reset" name="reset" id="reset">
+                <input type="reset" name="clear" id="clear">
             </form>
-
-            <?php include "db_uploader.php"; ?>
         </div>
 
         <div class="grid-container">
@@ -87,6 +84,8 @@
                 
             </div>
             <div id="panel_2">
+                <?php include "db_remover.php"; ?>
+
                 <!-- Data Loaded from jQuery to PHP and MySQL Database comes here-->
             </div>
         </div>

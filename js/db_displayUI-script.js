@@ -1,6 +1,7 @@
 $(document).ready(function() {
     // This is the javascript for 'db_displayUI.php' which is responsible for DOM (Document Object Model) manipulation of the website
     // It can also be useful for key and mousepresses.    
+    
     var loader_directory = '../database/db_loader.php';
     var uploader_directory = '../database/db_uploader.php';
     var remover_directory = '../database/db_remover.php';
@@ -11,15 +12,11 @@ $(document).ready(function() {
 
     var placeholder_dropdown = "<option value='' disabled selected>Select your option</option>";
 
-    // This part is responsible for loading the database from the right panel ('div#panel_2') of db_displayUI.php
+    // This part is responsible for loading the database from the right panel of db_displayUI.php
     // It will intially load the database first based from the first value of '#tables' when the display was opened.
     load_database(document.getElementById("tables").value);
-
-    $("#clear").click(function() {
-        remove_dropdown();
-        load_database('pres_candidates');
-    });
     
+    // This part will prevent the browser for updating the website when the form is submitted and eventually send it to the database
     $('form').on('submit', function(event) {
         event.preventDefault();
 
@@ -60,7 +57,7 @@ $(document).ready(function() {
                     document.getElementById('city_or_municipalities').value = city_or_municipalities_value;
                 }
 
-                console.log("Status:" + textStatus);
+                console.log("Status: " + textStatus);
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.error("Status: " + textStatus);
@@ -69,6 +66,13 @@ $(document).ready(function() {
         });
     });
 
+    // When clear was pressed, not only the text in the inputs were erased but also the dropdowns will be removed and move to pres_candidates once again
+    $("#clear").click(function() {
+        remove_dropdown();
+        load_database('pres_candidates');
+    });
+
+    // This part is where the database were loaded in #panel_2
     function load_database (table_selected, region = null, province = null, municipality = null) {
         switch (table_selected) {
             case 'pres_candidates': case 'vcpres_candidates':
@@ -76,7 +80,7 @@ $(document).ready(function() {
                     table_selected : table_selected
                 }, 
                     function() {
-                        remove_cell_button();
+                        buttons();
                 });
             break;
     
@@ -87,7 +91,7 @@ $(document).ready(function() {
                     provinces: province
                 }, 
                     function() {
-                        remove_cell_button();
+                        buttons();
                 });
             break;
     
@@ -99,24 +103,38 @@ $(document).ready(function() {
                     city_or_municipalities: municipality
                 },
                     function() {
-                        remove_cell_button();
+                        buttons();
                     }
                 );
             break;
         }
     }
 
-    
-    function remove_cell_button() {
-        $(".candidate_card").append("<button class='remove_db' style='display: none;'>Delete</button>");
-        $(".remove_db").click(function() {
-            let candidate = this.parentNode.childNodes[1].innerText;
+    // This part is responsible for the showing and hiding the buttons from each cells as well as the function for expand and delete database  
+    function buttons() {
+        $(".candidate_card").prepend("<button class='toggle_expand' style='display: none;'>Show</button>");
+        $(".candidate_card").prepend("<button class='remove_db' style='display: none;'>Delete</button>");
 
+        for (let i = 1; i <= $(".cells").length; i++) {
+            $(".cells:nth-child(" + i + ")").hover(
+                function() {
+                    $(".cells:nth-child(" + i + ") .toggle_expand").show();
+                    $(".cells:nth-child(" + i + ") .remove_db").show();
+                }, 
+                function() {
+                    $(".cells:nth-child(" + i + ") .toggle_expand").hide();
+                    $(".cells:nth-child(" + i + ") .remove_db").hide();
+                });
+        }
+
+        $(".remove_db").click(function() {
+            let candidate = this.parentNode.childNodes[5].innerText;
+    
             let tables = document.getElementById("tables").value;
             let regions = document.getElementById("regions");
             let provinces = document.getElementById("provinces");
             let city_or_municipalities = document.getElementById("city_or_municipalities");
-
+    
             let prompt = confirm("Are you sure that you want to delete this database?");
             if(prompt == true) {
                 $.post(remover_directory, {
@@ -131,30 +149,36 @@ $(document).ready(function() {
                         (city_or_municipalities) ? city_or_municipalities.value : null
                     );
 
+                    console.log(candidate)
+    
                     console.log("Removing Success");
                 })
                 .fail(function(jqXHR) {
                     console.log("Removing Failed");
                 })
-
+    
             }
             else {
                 console.log("Removing Cancelled");
             }
         });
+    
+        $(".toggle_expand").click(function() {
+            let card = this.parentNode;
 
-        for (let i = 1; i <= $(".cells").length; i++) {
-            $(".cells:nth-child(" + i + ")").hover(
-                function() {
-                    $(".cells:nth-child(" + i + ") .remove_db").show();
-                }, 
-                function() {
-                    $(".cells:nth-child(" + i + ") .remove_db").hide();
-                });
-        }
+            if (this.innerText == 'Show') {
+                card.style.height = "fit-content";
+                this.innerText = "Hide";
+            }
+            else if (this.innerText == 'Hide')
+            {   
+                card.style.height = "175px";
+                this.innerText = "Show";
+            }
+        })
     }
-
-    // Then it will detect if the value was changed (in other words if the user chose a table from the dropdown)
+ 
+    // This will detect if the value was changed (in other words if the user chose a table from the dropdown)
     $("select#tables").change(function(){
         // Next will be the switch..case from which table was chosen. 
         // That table will be sent as a value for loader_directory (db_loader) and proceeds to load every data it contains.
@@ -162,7 +186,7 @@ $(document).ready(function() {
             case 'pres_candidates': case 'vcpres_candidates':
                 $("div#panel_2").load(loader_directory, {table_selected : document.getElementById("tables").value}, 
                     function() {
-                        remove_cell_button();
+                        buttons();
                 });
 
                 remove_dropdown();
@@ -171,7 +195,7 @@ $(document).ready(function() {
             case 'governor_candidates':
                 $("div#panel_2").load(loader_directory, {table_selected : document.getElementById("tables").value}, 
                     function() {
-                        remove_cell_button();
+                        buttons();
                 });
 
                 remove_dropdown();
@@ -186,7 +210,7 @@ $(document).ready(function() {
             case 'mayor_candidates':
                 $("div#panel_2").load(loader_directory, {table_selected : document.getElementById("tables").value},
                     function() {
-                        remove_cell_button();
+                        buttons();
                     }
                 );
                 
@@ -213,7 +237,7 @@ $(document).ready(function() {
                 regions: document.getElementById("regions").value
             },
             function() {
-                remove_cell_button();
+                buttons();
             });
         });
 
@@ -229,7 +253,7 @@ $(document).ready(function() {
                 provinces: document.getElementById("provinces").value
             },
             function() {
-                remove_cell_button();
+                buttons();
             });
         });
 
@@ -241,7 +265,7 @@ $(document).ready(function() {
                 city_or_municipalities: document.getElementById("city_or_municipalities").value
             }, 
             function() {
-                remove_cell_button();
+                buttons();
             });
         });
     });

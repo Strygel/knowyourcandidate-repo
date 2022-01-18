@@ -1,4 +1,7 @@
 <?php
+    // PLANS (01/18/22): I am planning to expand this in the future by increasing the criteria of who to delete since 
+    // it is flawed yet to just detect the candidate's name only
+
     include 'db_connect.php';
     candidates_db();
 
@@ -13,7 +16,7 @@
 
         unlink($query);
 
-        $sql = "DELETE FROM $table WHERE candidate='$candidate' LIMIT 1";
+        $sql = "DELETE FROM $table WHERE candidate='$candidate'";
         mysqli_query(candidates_db(), $sql);
     }
 

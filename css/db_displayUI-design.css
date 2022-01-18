@@ -1,6 +1,10 @@
+/* ========== Globals ========== */
+
 /* ========== Elements ========== */
 
 html, body {
+    font-family: 'Roboto';
+    font-weight: 300;
     margin: 0px;
 }
 
@@ -8,8 +12,8 @@ h2 {
     text-align: center;
 }
 
-h2, #panel_1, #panel_2 {
-    color: white;
+h2, #panel_1, #panel_2 {   
+    color: white
 }
 
 input[type=text], input[type=number] {
@@ -30,6 +34,26 @@ textarea{
     width: 96%;
 }
 
+p:nth-of-type(n+2):nth-of-type(-n+5).information {
+    margin-top: 0;
+    width: 38%;
+    font-size: 20px;
+    float: left;
+    left: 220px;
+    box-sizing: border-box;
+}
+
+p:nth-of-type(6).information {
+    padding-top: 30px;
+}
+
+p:nth-of-type(n+6):nth-of-type(-n+7).information {
+    position: relative;
+    left: 220px;
+    box-sizing: border-box;
+    clear: left;
+}
+
 /* ========== Classes  ========== */
 
 .grid-container {
@@ -43,21 +67,88 @@ textarea{
     border-width: 10px; 
     border-style: solid;
     border-color: #171a18;
+    text-decoration: none;
 }
 
 .candidate_card {
+    position: relative;
+    height: 175px;
     border-style: solid;
     border-width: 2px;
     border-color: wheat;
     padding: 10px;
+    box-sizing: border-box;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.candidate_name {
+    position: relative;
+    left: 220px;
+    font-size: 40px;
+    color: #418559;
+    width: fit-content;
+
+    margin-top: unset;
+    margin-bottom: 20px;
+}
+
+.candidate_picture {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+}
+
+.information {
+    position: relative;
+    /* width: fit-content; */
+    color: white;
+}
+
+.paragraph {
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    box-sizing: border-box;
+}
+.category {
+    color:bisque;
+}
+
+.stance {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 10%;
+}
+
+.paragraph, .stance {
+    left: 220px;
+}
+
+.toggle_expand {
+    background-color: #418559;
+}
+
+.remove_db {
+    background-color: crimson;
+}
+
+.toggle_expand, .remove_db {
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    width: 100px;
+    height: 50px;
+    color: whitesmoke;
 }
 
 /* ========== IDs ========== */
 
 #panel_1 {
-    position: fixed;
     background-color: #418559;
-    width: 20%;
     height: 100vh;
 
     overflow-x: hidden;
@@ -69,8 +160,9 @@ textarea{
 }
 
 #panel_2 {
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
     background-color: #171a18;
     float: right;
+
+    overflow-x: auto;
+    overflow-y: auto;
 }

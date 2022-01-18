@@ -1,5 +1,6 @@
 <?php
-    // Do not bother this code. It is for my own matters only.
+    // Do not bother this code. It is for my own matters only. It's a mess XD
+
     include '../snippets/db_uploader_functions.php';
     
     if($_SERVER['REQUEST_METHOD'] == 'POST') {

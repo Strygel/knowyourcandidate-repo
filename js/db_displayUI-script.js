@@ -129,17 +129,20 @@ $(document).ready(function() {
 
         $(".remove_db").click(function() {
             let candidate = this.parentNode.childNodes[5].innerText;
+            let birthdate = this.parentNode.childNodes[11].childNodes[1].nodeValue;
     
-            let tables = document.getElementById("tables").value;
+            let tables = document.getElementById("tables").value; 
             let regions = document.getElementById("regions");
             let provinces = document.getElementById("provinces");
             let city_or_municipalities = document.getElementById("city_or_municipalities");
     
             let prompt = confirm("Are you sure that you want to delete this database?");
+                
             if(prompt == true) {
                 $.post(remover_directory, {
                     table_selected: document.getElementById("tables").value,
-                    candidate: candidate
+                    candidate: candidate,
+                    birthdate: birthdate
                 })
                 .done(function(jqXHR) {
                     load_database(

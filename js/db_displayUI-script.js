@@ -15,6 +15,7 @@ $(document).ready(function() {
     // This part is responsible for loading the database from the right panel of db_displayUI.php
     // It will intially load the database first based from the first value of '#tables' when the display was opened.
     load_database(document.getElementById("tables").value);
+    $("textarea#political_background + br + br").after(stance());
     
     // This part will prevent the browser for updating the website when the form is submitted and eventually send it to the database
     $('form').on('submit', function(event) {
@@ -190,6 +191,9 @@ $(document).ready(function() {
                 });
 
                 remove_dropdown();
+                remove_stance();
+
+                $("textarea#political_background + br + br").after(stance());
             break;
 
             case 'governor_candidates':
@@ -197,13 +201,16 @@ $(document).ready(function() {
                     function() {
                         buttons();
                 });
-
+                
                 remove_dropdown();
+                remove_stance();
 
                 $("select#tables + br + br").after(regions_dropdown() + provinces_dropdown() + "<br class='blank'>");
+
                 $("select#regions").load(regions_directory, function() {
                     $("select#regions").prepend(placeholder_dropdown);
                 });
+
 
             break;
 
@@ -213,14 +220,18 @@ $(document).ready(function() {
                         buttons();
                     }
                 );
-                
+
                 remove_dropdown();
+                remove_stance();
 
                 $("select#tables + br + br").after(regions_dropdown() + provinces_dropdown() + city_or_municipality_dropdown() + "<br class='blank'>");
+
                 $("select#regions").load(regions_directory, 
                 function() {
                     $("select#regions").prepend(placeholder_dropdown);
                 });
+
+
             break;
         }
 

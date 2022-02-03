@@ -63,21 +63,11 @@
                     <label for="political_background"> Political Background:</label> <br>
                     <textarea type='text' name="political_background" id="political_background" class="textbox" required></textarea> <br> <br>
 
-                    <div>Political Stands: </div>
-                    <label for="stance_divorce">Divorce:</label> <br>
-                    <input type='radio' name='stance_divorce' id='stance_divorce' value="Yes" required>Yes</input>
-                    <input type='radio' name='stance_divorce' id='stance_divorce' value="No">No</input>
-                    <input type='radio' name='stance_divorce' id='stance_divorce' value="Unknown">Unknown</input> <br>
+                    <!-- Stance for Divorce -->
 
-                    <label for="stance_death_penalty">Death Penalty:</label> <br>
-                    <input type='radio' name='stance_death_penalty' id='stance_death_penalty' value="Yes" required>Yes</input>
-                    <input type='radio' name='stance_death_penalty' id='stance_death_penalty' value="No">No</input>
-                    <input type='radio' name='stance_death_penalty' id='stance_death_penalty' value="Unknown">Unknown</input> <br>
+                    <!-- Stance for Death Penalty -->
 
-                    <label for="stance_same_sex_marriage">Same Sex Marriage:</label> <br>
-                    <input type='radio' name='stance_same_sex_marriage' id='stance_same_sex_marriage' value="Yes" required>Yes</input>
-                    <input type='radio' name='stance_same_sex_marriage' id='stance_same_sex_marriage' value="No">No</input>
-                    <input type='radio' name='stance_same_sex_marriage' id='stance_same_sex_marriage' value="Unknown">Unknown</input> <br> <br>
+                    <!-- Stance for Same Sex Marriage -->
 
                     <input type="submit" name="submit" id="submit">
                     <input type="reset" name="clear" id="clear">

@@ -24,6 +24,8 @@
     $selections[1] = isset($_POST['regions']) && !empty($_POST['regions']);
     $selections[2] = isset($_POST['provinces']) && !empty($_POST['provinces']);
     $selections[3] = isset($_POST['city_or_municipalities']) && !empty($_POST['city_or_municipalities']);
+    
+
 
     switch ($selections) {
         case ($selections[0] && $selections[1] && $selections[2] && $selections[3]): // For mayor_candidates database
@@ -32,7 +34,8 @@
             $provinces = $_POST['provinces'];
             $city_or_municipalities = $_POST['city_or_municipalities'];
 
-            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' AND city_or_municipalities='$city_or_municipalities' ORDER BY candidate ASC";
+            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' AND city_or_municipalities='$city_or_municipalities' 
+            ORDER BY candidate ASC, regions ASC, provinces ASC, city_or_municipalities ASC";
         break;
 
         case ($selections[0] && $selections[1] && $selections[2]): // For governor_candidates database
@@ -40,14 +43,14 @@
             $regions = $_POST['regions'];
             $provinces = $_POST['provinces'];
 
-            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' ORDER BY candidate ASC, regions ASC, provinces ASC";
+            $sql = "SELECT * from $table WHERE regions='$regions' AND provinces='$provinces' ORDER BY candidate ASC, provinces ASC, regions ASC";
         break;
 
         case ($selections[0] && $selections[1]):
             $table = $_POST['table_selected'];
             $regions = $_POST['regions'];
 
-            $sql = "SELECT * from $table WHERE regions='$regions' ORDER BY candidate ASC, regions ASC, provinces ASC, city_or_municipalities ASC";
+            $sql = "SELECT * from $table WHERE regions='$regions' ORDER BY candidate ASC, regions ASC, provinces ASC";
         break;
 
         case ($selections[0]): // For pres_candidates and vcpres_candidates database
@@ -73,34 +76,35 @@
                     <p class="information"><span class="category">Hometown: </span><?= $data[6] ?></p>
                     <ul class="information"><span class="category">Honorary Degree: </span>
 <?php 
-                    $list = explode("|", $data[7]);
-                    foreach ($list as $bullet) {
+            $list = explode("|", $data[7]);
+            foreach ($list as $bullet) {
 ?>
                         <li class="bullet"><?= $bullet ?></li>
 <?php
-                    }
+            }
 ?>
                     </ul>
                     <p class="information"><span class="category">Tertiary: </span><?= $data[8] ?></p>
                     <p class="paragraph"><span class="category">Political Background: </span><?= $data[9] ?></p> 
+<?php
+            if ($table == "pres_candidates" || $table == "vcpres_candidates") {
+?>
                     <p class="stance"><span class="category">Divorce: </span><?= $data[10] ?></p>
                     <p class="stance"><span class="category">Death Penalty: </span><?= $data[11] ?></p>
                     <p class="stance"><span class="category">Same Sex Marriage: </span><?= $data[12] ?></p>
-<?php
-            if (array_key_exists(13, $data)) {
-?>
-                    <p class="location"><span class="category">Region: </span><?= $data[13] ?></p>
+
 <?php
             }
-            if (array_key_exists(14, $data)) {
+            elseif ($table == "governor_candidates" || $table == "mayor_candidates") {
 ?>
-                    <p class="location"><span class="category">Province: </span><?= $data[14] ?></p>
+                    <p class="location"><span class="category">Region: </span><?= $data[10] ?></p>
+                    <p class="location"><span class="category">Province: </span><?= $data[11] ?></p>
 <?php
-            }
-            if (array_key_exists(15, $data)) {
+                if (array_key_exists(12, $data)) {
 ?>
-                    <p class="location"><span class="category">City or Municipality: </span><?= $data[15] ?></p>
+                    <p class="location"><span class="category">City or Municipality: </span><?= $data[12] ?></p>
 <?php
+                }
             }
 ?>
                 </div>
@@ -108,7 +112,7 @@
 <?php
         }
     }
-    else { 
+    else {
 ?>
         <div class='columns'>
             <h2> Database Empty </h2>

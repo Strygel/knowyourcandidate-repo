@@ -1,13 +1,11 @@
 /* ========== Globals ========== */
-
-/* ========== Elements ========== */
-
-html, body {
+body {
     font-family: 'Roboto';
     font-weight: 300;
     margin: 0px;
 }
 
+/* ========== Elements ========== */
 h2 {
     text-align: center;
 }
@@ -117,10 +115,11 @@ p:nth-of-type(n+6):nth-of-type(-n+7).information, .location {
 
 .paragraph {
     position: relative;
-    box-sizing: border-box;
     width: 80%;
     box-sizing: border-box;
+    margin-block-end: 2em;
 }
+
 .category {
     color:bisque;
 }
@@ -130,6 +129,7 @@ p:nth-of-type(n+6):nth-of-type(-n+7).information, .location {
     box-sizing: border-box;
     float: left;
     margin-right: 10%;
+    margin-block-start: 0;
 }
 
 .paragraph, .stance {

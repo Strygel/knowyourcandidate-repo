@@ -7,19 +7,19 @@
         $table = $_POST['tables'];
         switch ($table) {
             case 'pres_candidates':
-                upload_POST($table, 'sql_1');
+                upload_POST($table, 'pres_table');
             break;
 
             case 'vcpres_candidates':
-                upload_POST($table, 'sql_2');
+                upload_POST($table, 'vcpres_table');
             break;
 
             case 'governor_candidates':
-                upload_POST($table, 'sql_3');      
+                upload_POST($table, 'governor_table');      
             break;
 
             case 'mayor_candidates':
-                upload_POST($table, 'sql_4');
+                upload_POST($table, 'mayor_table');
             break;
         }      
     }
@@ -52,9 +52,9 @@
         isset($_POST['provinces']) ? $province = $_POST['provinces'] : '';
         isset($_POST['city_or_municipalities']) ? $city_or_municipality = $_POST['city_or_municipalities'] : '';
         // ==============================================================
-        $stance_divorce = $_POST['stance_divorce'];
-        $stance_death_penalty = $_POST['stance_death_penalty'];
-        $stance_same_sex_marriage = $_POST['stance_same_sex_marriage'];
+        isset($_POST['stance_divorce']) ? $stance_divorce = $_POST['stance_divorce'] : '';
+        isset($_POST['stance_death_penalty']) ? $stance_death_penalty = $_POST['stance_death_penalty'] : '';
+        isset($_POST['stance_same_sex_marriage']) ? $stance_same_sex_marriage = $_POST['stance_same_sex_marriage'] : '';
         // ==============================================================
         
         $fileName = basename($_FILES['fileToUpload']['name']);
@@ -64,11 +64,11 @@
 
         if (in_array($fileType, $allowTypes)) {
             switch ($sql) {
-                case 'sql_1': case 'sql_2':
-                    if ($sql == 'sql_1') {
+                case 'pres_table': case 'vcpres_table':
+                    if ($sql == 'pres_table') {
                         $directory = directory_editor('presidents');
                     }
-                    else if ($sql == 'sql_2') {
+                    else if ($sql == 'vcpres_table') {
                         $directory = directory_editor('vc_presidents');
                     }
 
@@ -83,7 +83,7 @@
                     '$stance_divorce', '$stance_death_penalty', '$stance_same_sex_marriage')";
                 break;
 
-                case 'sql_3':
+                case 'governor_table':
                     $directory = directory_editor('governors', $region, $province);
                     
                     $targetFilePath = $directory . "/" . $fileName;
@@ -91,13 +91,13 @@
 
                     $new_directory = fileName_editor($targetFilePath, $fileType, $directory, $table, $candidate, $region, $province);
 
-                    $sql = "INSERT INTO $table (candidate, picture_dir, nickname, age, birthdate, hometown, honorary_degree, tertiary, political_background, 
-                    stance_divorce, stance_death_penalty, stance_same_sex_marriage, regions, provinces) 
-                    VALUES ('$candidate', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', '$political_background', 
-                    '$stance_divorce', '$stance_death_penalty', '$stance_same_sex_marriage', '$region', '$province')";
+                    $sql = "INSERT INTO $table (candidate, picture_dir, nickname, age, birthdate, hometown, honorary_degree, 
+                    tertiary, political_background, regions, provinces) 
+                    VALUES ('$candidate', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', 
+                    '$tertiary', '$political_background', '$region', '$province')";
                 break;
 
-                case 'sql_4':
+                case 'mayor_table':
                     $directory = directory_editor('mayors', $region, $province, $city_or_municipality);
 
                     $targetFilePath = $directory . "/" . $fileName;
@@ -106,10 +106,10 @@
                     
                     $new_directory = fileName_editor($targetFilePath, $fileType, $directory, $table, $candidate, $region, $province, $city_or_municipality);
 
-                    $sql = "INSERT INTO $table (candidate, picture_dir, nickname, age, birthdate, hometown, honorary_degree, tertiary, political_background, 
-                    stance_divorce, stance_death_penalty, stance_same_sex_marriage, regions, provinces, city_or_municipalities) 
-                    VALUES ('$candidate', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', '$political_background', 
-                    '$stance_divorce', '$stance_death_penalty', '$stance_same_sex_marriage', '$region', '$province', '$city_or_municipality')";
+                    $sql = "INSERT INTO $table (candidate, picture_dir, nickname, age, birthdate, hometown, honorary_degree, 
+                    tertiary, political_background, regions, provinces, city_or_municipalities) 
+                    VALUES ('$candidate', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', 
+                    '$political_background', '$region', '$province', '$city_or_municipality')";
                 break;
             }
             mysqli_query(candidates_db(), $sql);

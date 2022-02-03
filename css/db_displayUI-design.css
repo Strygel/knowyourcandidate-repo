@@ -28,13 +28,22 @@ select, input[type=date] {
     width: 97%;
 }
 
-textarea{
+textarea {
     resize: none;
     height: 70px;
     width: 96%;
 }
 
-p:nth-of-type(n+2):nth-of-type(-n+5).information {
+ul {
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+}
+
+li {
+    margin-left: 40px;
+}
+
+p:nth-of-type(n+2):nth-of-type(-n+5).information, ul{
     margin-top: 0;
     width: 38%;
     font-size: 20px;

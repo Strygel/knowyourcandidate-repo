@@ -150,10 +150,7 @@ $(document).ready(function() {
                         (regions) ? regions.value : null,
                         (provinces) ? provinces.value : null,
                         (city_or_municipalities) ? city_or_municipalities.value : null
-                    );
-
-                    console.log(candidate)
-    
+                    );    
                     console.log("Removing Success");
                 })
                 .fail(function(jqXHR) {

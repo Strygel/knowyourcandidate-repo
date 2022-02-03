@@ -55,7 +55,7 @@
                     <input type='text' name="hometown" id="hometown" required></input> <br> <br>
 
                     <label for="honorary_degree"> Honorary Degree:</label> <br>
-                    <input type='text' name="honorary_degree" id="honorary_degree" required></input> <br> <br>
+                    <textarea type='text' name="honorary_degree" id="honorary_degree" required></textarea> <br> <br>
 
                     <label for="tertiary"> Tertiary:</label> <br>
                     <input type='text' name="tertiary" id="tertiary" required></input> <br> <br>

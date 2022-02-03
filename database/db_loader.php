@@ -60,37 +60,46 @@
         $query = mysqli_query(candidates_db(), $sql);
         $query = mysqli_fetch_all($query);
         
-        foreach ($query as $rows)
+        foreach ($query as $data)
         {
 ?>  
             <div class='cells'>
                 <div class='candidate_card'>
-                    <img src='<?= $rows[2] ?>' class='candidate_picture' width='100' height='100'>
-                    <p class="candidate_name"><?= $rows[1] ?></p>
-                    <p class="information"><span class="category">Nickname: </span><?= $rows[3] ?></p>
-                    <p class="information"><span class="category">Age: </span><?= $rows[4] ?></p>
-                    <p class="information"><span class="category">Birthdate: </span><?= $rows[5] ?></p>
-                    <p class="information"><span class="category">Hometown: </span><?= $rows[6] ?></p>
-                    <p class="information"><span class="category">Honorary Degree: </span><?= $rows[7] ?></p>
-                    <p class="information"><span class="category">Tertiary: </span><?= $rows[8] ?></p>
-                    <p class="paragraph"><span class="category">Political Background: </span><?= $rows[9] ?></p> 
-                    <p class="stance"><span class="category">Divorce: </span><?= $rows[10] ?></p>
-                    <p class="stance"><span class="category">Death Penalty: </span><?= $rows[11] ?></p>
-                    <p class="stance"><span class="category">Same Sex Marriage: </span><?= $rows[12] ?></p>
-<?php
-            if (array_key_exists(13, $rows)) {
+                    <img src='<?= $data[2] ?>' class='candidate_picture' width='100' height='100'>
+                    <p class="candidate_name"><?= $data[1] ?></p>
+                    <p class="information"><span class="category">Nickname: </span><?= $data[3] ?></p>
+                    <p class="information"><span class="category">Age: </span><?= $data[4] ?></p>
+                    <p class="information"><span class="category">Birthdate: </span><?= $data[5] ?></p>
+                    <p class="information"><span class="category">Hometown: </span><?= $data[6] ?></p>
+                    <ul class="information"><span class="category">Honorary Degree: </span>
+<?php 
+                    $list = explode("|", $data[7]);
+                    foreach ($list as $bullet) {
 ?>
-                    <p class="location">       Region:               <?= $rows[13] ?> </p>
+                        <li class="bullet"><?= $bullet ?></li>
+<?php
+                    }
+?>
+                    </ul>
+                    <p class="information"><span class="category">Tertiary: </span><?= $data[8] ?></p>
+                    <p class="paragraph"><span class="category">Political Background: </span><?= $data[9] ?></p> 
+                    <p class="stance"><span class="category">Divorce: </span><?= $data[10] ?></p>
+                    <p class="stance"><span class="category">Death Penalty: </span><?= $data[11] ?></p>
+                    <p class="stance"><span class="category">Same Sex Marriage: </span><?= $data[12] ?></p>
+<?php
+            if (array_key_exists(13, $data)) {
+?>
+                    <p class="location">       Region:               <?= $data[13] ?> </p>
 <?php
             }
-            if (array_key_exists(14, $rows)) {
+            if (array_key_exists(14, $data)) {
 ?>
-                    <p class="location">       Province:            <?= $rows[14] ?> </p>
+                    <p class="location">       Province:            <?= $data[14] ?> </p>
 <?php
             }
-            if (array_key_exists(15, $rows)) {
+            if (array_key_exists(15, $data)) {
 ?>
-                    <p class="location">       City or Municipality: <?= $rows[15] ?> </p>
+                    <p class="location">       City or Municipality: <?= $data[15] ?> </p>
 <?php
             }
 ?>

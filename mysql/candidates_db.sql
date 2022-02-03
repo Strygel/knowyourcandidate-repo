@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2022 at 02:39 PM
+-- Generation Time: Feb 03, 2022 at 01:49 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -38,9 +38,6 @@ CREATE TABLE `governor_candidates` (
   `honorary_degree` varchar(255) NOT NULL,
   `tertiary` varchar(255) NOT NULL,
   `political_background` text NOT NULL,
-  `stance_divorce` varchar(255) NOT NULL,
-  `stance_death_penalty` varchar(255) NOT NULL,
-  `stance_same_sex_marriage` varchar(255) NOT NULL,
   `regions` varchar(255) NOT NULL,
   `provinces` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -62,9 +59,6 @@ CREATE TABLE `mayor_candidates` (
   `honorary_degree` varchar(255) NOT NULL,
   `tertiary` varchar(255) NOT NULL,
   `political_background` text NOT NULL,
-  `stance_divorce` varchar(255) NOT NULL,
-  `stance_death_penalty` varchar(255) NOT NULL,
-  `stance_same_sex_marriage` varchar(255) NOT NULL,
   `regions` varchar(255) NOT NULL,
   `provinces` varchar(255) NOT NULL,
   `city_or_municipalities` varchar(255) NOT NULL
@@ -91,13 +85,6 @@ CREATE TABLE `pres_candidates` (
   `stance_death_penalty` varchar(255) NOT NULL,
   `stance_same_sex_marriage` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `pres_candidates`
---
-
-INSERT INTO `pres_candidates` (`id`, `candidate`, `picture_dir`, `nickname`, `age`, `birthdate`, `hometown`, `honorary_degree`, `tertiary`, `political_background`, `stance_divorce`, `stance_death_penalty`, `stance_same_sex_marriage`) VALUES
-(16, 'TEST', '../pictures/presidents/TEST-president.jpg', 'asdf', 123, '2022-01-18', 'asdf', 'asdf', 'asdf', 'asdf', 'Unknown', 'Unknown', 'Unknown');
 
 -- --------------------------------------------------------
 
@@ -157,25 +144,25 @@ ALTER TABLE `vcpres_candidates`
 -- AUTO_INCREMENT for table `governor_candidates`
 --
 ALTER TABLE `governor_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `mayor_candidates`
 --
 ALTER TABLE `mayor_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `pres_candidates`
 --
 ALTER TABLE `pres_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `vcpres_candidates`
 --
 ALTER TABLE `vcpres_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

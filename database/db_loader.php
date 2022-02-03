@@ -24,8 +24,6 @@
     $selections[1] = isset($_POST['regions']) && !empty($_POST['regions']);
     $selections[2] = isset($_POST['provinces']) && !empty($_POST['provinces']);
     $selections[3] = isset($_POST['city_or_municipalities']) && !empty($_POST['city_or_municipalities']);
-    
-
 
     switch ($selections) {
         case ($selections[0] && $selections[1] && $selections[2] && $selections[3]): // For mayor_candidates database

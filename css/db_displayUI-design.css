@@ -56,7 +56,7 @@ p:nth-of-type(6).information {
     padding-top: 30px;
 }
 
-p:nth-of-type(n+6):nth-of-type(-n+7).information {
+p:nth-of-type(n+6):nth-of-type(-n+7).information, .location {
     position: relative;
     left: 220px;
     box-sizing: border-box;

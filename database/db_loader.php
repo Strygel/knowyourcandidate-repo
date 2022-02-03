@@ -89,17 +89,17 @@
 <?php
             if (array_key_exists(13, $data)) {
 ?>
-                    <p class="location">       Region:               <?= $data[13] ?> </p>
+                    <p class="location"><span class="category">Region: </span><?= $data[13] ?></p>
 <?php
             }
             if (array_key_exists(14, $data)) {
 ?>
-                    <p class="location">       Province:            <?= $data[14] ?> </p>
+                    <p class="location"><span class="category">Province: </span><?= $data[14] ?></p>
 <?php
             }
             if (array_key_exists(15, $data)) {
 ?>
-                    <p class="location">       City or Municipality: <?= $data[15] ?> </p>
+                    <p class="location"><span class="category">City or Municipality: </span><?= $data[15] ?></p>
 <?php
             }
 ?>

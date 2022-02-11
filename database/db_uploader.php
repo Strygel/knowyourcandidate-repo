@@ -25,7 +25,6 @@
     }
 ?>
 
-
 <?php
     // Error catcher(?) NOT YET WORKING
     function alert($msg) {

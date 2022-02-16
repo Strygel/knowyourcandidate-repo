@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>KnowYourCandidate</title>
-        <link rel="stylesheet" href="css/ph_mapTEST-design.css">
 
         <!-- <link rel="stylesheet" href="ph_map/chosen_v1.8.7/chosen.css"> -->
+        <link rel="stylesheet" href="css/ph_mapTEST-design.css">
 
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <!-- <script type="text/javascript" src="ph_map/chosen_v1.8.7/chosen.jquery.min.js"></script> -->
@@ -19,6 +19,8 @@
 
         <script type="text/javascript" src="snippets/ph_mapTEST_functions.js"></script>
         <script type="text/javascript" src="js/ph_mapTEST-script.js"></script>
+
+
     </head>
     
     <body>

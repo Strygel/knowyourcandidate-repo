@@ -27,11 +27,20 @@ $(document).ready(function(){
 	// 	// $("#mysql_code").text(value.toUpperCase());
 	// });
 
-	var table = "governor_candidates"; // can also be mayor_candidates
+	var table = "mayor_candidates"; // can also be mayor_candidates
 
-	$("select#regions").load(regions_directory, function() {
-		$("select#regions").prepend(placeholder_dropdown);
-	});
+	if (table == "governor_candidates") {
+		$("select#regions").load(regions_directory, function() {
+			$("select#regions").prepend(placeholder_dropdown);
+			$("select#regions option[value='NATIONAL CAPITAL REGION (NCR)']").remove();
+		});
+	}
+	else if (table == "mayor_candidates") {
+		$("select#regions").load(regions_directory, function() {
+			$("select#regions").prepend(placeholder_dropdown);
+		});
+	}
+
 
 	$("select#regions").change(function() {
 		$("select#city_or_municipalities option").remove();
@@ -45,7 +54,7 @@ $(document).ready(function(){
 		);
 		
 		if (document.getElementById("provinces").value != '' || document.getElementById("city_or_municipalities").value != '') {
-			$("span#mysql_code").text('');
+			$("span#mysql_code").text(toMySQLcode(table, document.getElementById("regions").value));
 			return simplemaps_countrymap.back();
 		}
 
@@ -86,7 +95,19 @@ $(document).ready(function(){
 			)
 		);
 
+		let str = toTitlecase(this.value);
+		if (document.getElementById("regions").value == "NATIONAL CAPITAL REGION (NCR)") {
+
+			simplemaps_countrymap.region_zoom("20", function() {
+				simplemaps_countrymap.state_zoom(city_or_municipalities[str]);
+				// simplemaps_countrymap_mapdata.state_specific[city_or_municipalities[str]].color = '#ffffff';
+			});
+			
+		}
+
 	});
+
+
 })
 
 // simplemaps_countrymap.hooks.zoomable_click_state = function(id) {
@@ -104,6 +125,12 @@ $(document).ready(function(){
 // 	let value = simplemaps_countrymap_mapdata.regions[id].name
 // 	$("#clicked_state").text(value);
 // 	$("#mysql_code").text(value.toUpperCase());
+// }
+
+// simplemaps_countrymap.hooks.back = function() {
+// 	$("select#regions").val('');
+// 	$("select#provinces option").remove();
+// 	$("select#city_or_municipalities option").remove();
 // }
 
  

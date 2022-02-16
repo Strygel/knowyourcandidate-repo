@@ -209,9 +209,8 @@ $(document).ready(function() {
 
                 $("select#regions").load(regions_directory, function() {
                     $("select#regions").prepend(placeholder_dropdown);
+                    $("select#regions option[value='NATIONAL CAPITAL REGION (NCR)']").remove();
                 });
-
-
             break;
 
             case 'mayor_candidates':

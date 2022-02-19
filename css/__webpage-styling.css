@@ -1,0 +1,57 @@
+	
+	.header {
+	border: 1px outset #e0eedd;
+	height:75px;
+	margin: 0px;
+	padding: 5px;
+	background-color: #e0eedd;
+	text-align: left;
+	<!-- Header Box CSS Style (For Options) -->	
+	}
+	
+	.headerTitle{
+	font-size:25px;
+	color: #598946;
+	font-weight: bold;
+	
+	}
+	.sectionHeaderStyling{
+	font-size:20px;
+	color: #598946;
+	font-weight: bolder;
+	
+	}	
+	.Title{
+	text-align: center;
+	font-size: 75px;
+	color: #598946;
+	<!-- Content Title in the main webpage -->
+	}
+	
+	.forTagline{
+	line-height: 0.5;
+	text-align: center;	
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+	}
+	
+	.forOpeningText{
+	margin-right: 200px;
+	margin-left : 200px;
+	font-size: 25px
+	}	
+	.forOptionsNearFooter{
+	margin-left: 75px;
+	<!-- For Content Text Styling-->
+	}
+	.forFooter{
+	text-align: center;
+	font-size: 25px;
+	color:#598946;
+	<!-- For Footer text Styling-->
+	}
+	body{
+	background-image: url('../webpages/background.png');
+	}
+	

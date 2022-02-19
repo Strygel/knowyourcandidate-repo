@@ -11,6 +11,7 @@
 
 	<!-- CSS Style -->
 	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
+	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
 	
 	
 
@@ -34,20 +35,26 @@
 			</div>
 			<div class = "col-md-2">
 				<br>
-				<a href = "index.html">
+				<a href = "index.html" class = "noHTMLLineTextDecoration">
 					<p class="sectionHeaderStyling">HOME</p>
 				</a>
 			</div>
 			<div
 			<div class = "col-md-2">
 				<br>
-				<a href = "candidates.html">
-					<p class="sectionHeaderStyling">CANDIDATES</p>
-				</a>
+				<div class = "dropdown">
+				<button class ="dropDownButtonMat">CANDIDATE</button>
+				<div class = "dropdown-content">
+					<a href = "president.html" class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">President</p></a>
+					<a href = "vice-president.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Vice President</p></a>
+					<a href = "mayor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Mayor</p></a>
+					<a href = "governor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Governor</p></a>
+				</div>
+				</div>
 			</div>
 			<div class = "col-md-2">
 				<br>
-				<a href = "about-us.html">
+				<a href = "about-us.html" class = "noHTMLLineTextDecoration">
 					<p class="sectionHeaderStyling">ABOUT US</p>
 				</a>
 			</div>
@@ -85,22 +92,26 @@
 		<div class = "col-md-3">
 			<a href = "president.html"> 
 			<img src = "president.png">
+			<p>President</p>
 			</a>
 			
 		</div>
 		<div class = "col-md-3">
 			<a href = "vice-president.html">
 			<img src = "vice-president.png">
+			<p>Vice President</p>
 			</a>
 		</div>
 		<div class = "col-md-3">
 			<a href = "mayor.html">
 			<img src = "mayor.png">
+			<p>Mayor</p>
 			</a>
 		</div>
 		<div class = "col-md-3">
 			<a href = "governor.html">
 			<img src = "governor.png">
+			<p>Governor</p>
 			</a>
 		</div>
 		

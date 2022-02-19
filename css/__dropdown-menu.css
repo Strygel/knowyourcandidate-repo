@@ -1,9 +1,18 @@
+/*Text Style*/
+.dropButtonMenu{
+	font-size: 25px;
+	color: #598946;
+	font-weight: bold;
+}
+
 
 .dropDownButtonMat{
-	background-color: black;
+	background-color: #e0eedd;
 	color: #598946;
-	padding: 25px;
+	padding: 12;
 	font-size: 20px;
+	font-weight: bold;
+	border: none;
 
 }
 
@@ -14,11 +23,11 @@
 
 .dropdown-content{
 	position: absolute;
-	background-color: lightgrey;
-	minwidth; 200px;
-	display:none;
+	background-color: #dcedec;
+	min-width: 200px;
+	display: none;
 	z-index: 1;
-	<!-- describes how the dropdown menu appears -->
+
 }
 
 .dropdown-content-color{
@@ -26,11 +35,13 @@
 	padding: 12px 16px;
 	text-decoration: none;
 	display:block;
-	<!-- describes the color and size of text in the drop down menu -->
+	
 }
 
+/*Main*/
+
 .dropdown-content-color:hover {  
-    background-color: orange;  
+    background-color: black;  
 }  
 .dropdown:hover .dropdown-content {  
     display: block;  
@@ -38,3 +49,4 @@
 .dropdown:hover .dropDownButtonMat{  
     background-color: grey;  
 }  
+

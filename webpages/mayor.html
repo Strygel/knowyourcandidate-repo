@@ -10,55 +10,8 @@
 
 
 	<!-- CSS Style -->
-	<style type='text/css'>
-	
-	.header {
-	border: 1px outset #e0eedd;
-	height:75px;
-	margin: 0px;
-	padding: 5px;
-	background-color: #e0eedd;
-	text-align: left;
-	<!-- Header Box CSS Style (For Options) -->	
-	}
-	
-	.headerTitle{
-	font-size:25px;
-	color: #598946;
-	font-weight: bold;
-	margin: 1px;
-	
-	}
-	.sectionHeaderStyling{
-	font-size:20px;
-	color: #598946;
-	font-weight: bold;
-	margin: 1px;
-	
-	}		
-	.Title{
-	text-align: center;
-	font-size: 75px;
-	margin: 0px;
-	<!-- Content Title in the main webpage -->
-	}
-	
-	.forTagline{
-	line-height: 0.5;
-	text-align: center;	
-	font-size: 30px;
-	font-weight: bold;
-	margin: 0px;
-	}
-	
-	.ballotBox{
-	
-	}	
-	.forContent{
-	margin: 25px;
-	<!-- For Content Text Styling-->
-	}
-	</style>
+	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
+	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
 	
 	
 
@@ -82,20 +35,26 @@
 			</div>
 			<div class = "col-md-2">
 				<br>
-				<a href = "index.html">
+				<a href = "index.html" class = "noHTMLLineTextDecoration">
 					<p class="sectionHeaderStyling">HOME</p>
 				</a>
 			</div>
 			<div
 			<div class = "col-md-2">
 				<br>
-				<a href = "candidates.html">
-					<p class="sectionHeaderStyling">CANDIDATES</p>
-				</a>
+				<div class = "dropdown">
+				<button class ="dropDownButtonMat">CANDIDATE</button>
+				<div class = "dropdown-content">
+					<a href = "president.html" class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">President</p></a>
+					<a href = "vice-president.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Vice President</p></a>
+					<a href = "mayor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Mayor</p></a>
+					<a href = "governor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Governor</p></a>
+				</div>
+				</div>
 			</div>
 			<div class = "col-md-2">
 				<br>
-				<a href = "about-us.html">
+				<a href = "about-us.html" class = "noHTMLLineTextDecoration">
 					<p class="sectionHeaderStyling">ABOUT US</p>
 				</a>
 			</div>
@@ -103,7 +62,8 @@
 		</div>
 		</div>
 	</div>
-<br><br><br>
+	
+	<br><br><br>
 
 	<div class = "content">
 	<p class = "forContent"> This is Mayor Section </p>

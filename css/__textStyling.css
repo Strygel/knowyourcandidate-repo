@@ -1,0 +1,23 @@
+
+/* Subheading */
+
+.subheadingTextHome{
+	font-family: Times New Roman;
+	color: #598946;
+	
+}
+.subheadtextPres{
+	margin-left: 65px;
+}
+.subheadtextVPres{
+	margin-left: 35px;
+}
+.subheadtextMayor{
+	margin-left: 65px;
+}
+.subheadtextGov{
+	margin-left: 55px;
+}
+.subheadingTextSize{
+	font-size: 25px;
+}

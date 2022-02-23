@@ -1,0 +1,26 @@
+#information{
+	width: 100%;
+	background:#e0eedd;
+	max-height: 3px; 
+	overflow: hidden;
+}
+
+#infoPictureWrap{
+	padding: 20px 70px 180px 40px;
+	float: left;
+}
+
+#infoWhiteSpaces{
+	background: white;
+	max-height: 360px;
+	padding: 20px 40px 20px 40px;
+	margin-left: 300px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+		
+#information.open{
+	max-height: 400px;
+}
+

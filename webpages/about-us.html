@@ -11,7 +11,16 @@
 
 	<!-- CSS Style -->
 	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
+	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
 	
+	<style>
+	body{
+	background-image: url('background/webpage-background.png');
+	}
+	footer{
+	background-image: url('background/footer-background.png');
+	}
+	</style>
 	
 
 </head>
@@ -34,20 +43,26 @@
 			</div>
 			<div class = "col-md-2">
 				<br>
-				<a href = "index.html">
+				<a href = "index.html" class = "noHTMLLineTextDecoration">
 					<p class="sectionHeaderStyling">HOME</p>
 				</a>
 			</div>
 			<div
 			<div class = "col-md-2">
 				<br>
-				<a href = "candidates.html">
-					<p class="sectionHeaderStyling">CANDIDATES</p>
-				</a>
+				<div class = "dropdown">
+				<button class ="dropDownButtonMat">CANDIDATE</button>
+				<div class = "dropdown-content">
+					<a href = "president.html" class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">President</p></a>
+					<a href = "vice-president.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Vice President</p></a>
+					<a href = "mayor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Mayor</p></a>
+					<a href = "governor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Governor</p></a>
+				</div>
+				</div>
 			</div>
 			<div class = "col-md-2">
 				<br>
-				<a href = "about-us.html">
+				<a href = "about-us.html" class = "noHTMLLineTextDecoration">
 					<p class="sectionHeaderStyling">ABOUT US</p>
 				</a>
 			</div>
@@ -55,7 +70,8 @@
 		</div>
 		</div>
 	</div>
-<br><br><br>
+	
+	<br><br><br>
 	
 	<!--Body-->
 	<div>
@@ -83,7 +99,6 @@
 			</div>
 			
 			<div class = "col-md-5">
-			<h2><center>Profile</center></h2>
 			
 			<div class = "row">
 				<div class = "col-md-6">
@@ -94,7 +109,7 @@
 					>
 					</center>
 					<br>
-					<p>Mark Anthony Pandan</p>
+					<p><center>Mark Anthony Pandan</center></p>
 					<br>
 				</div>
 				
@@ -106,7 +121,7 @@
 					>
 					</center>
 					<br>
-					<p>Chenille Balignasay</p> 
+					<p><center>Chenille Balignasay</center></p> 
 					<br>
 				</div>
 				
@@ -118,7 +133,7 @@
 					>
 					</center>
 					<br>
-					<p>Angelica Lacerna</p>
+					<p><center>Angelica Lacerna</center></p>
 					<br>
 				</div>
 				
@@ -130,7 +145,7 @@
 					>
 					</center>
 					<br>
-					<p>Khuille Bagares</p>
+					<p><center>Khuille Bagares</center></p>
 					<br>
 				</div>
 				
@@ -144,7 +159,9 @@
 
 </body>
 <footer>
+	<br>
 	<h2 class = "forFooter"><img src = "jade-dragon-logo.png">Jade Dragons</h2>
+	<br>
 </footer>
 
 </html>

@@ -1,0 +1,50 @@
+#tooltip{
+	position: relative;
+	cursor: pointer;
+	padding: 7px;
+	font-size: 15px;
+	font-weight: bold;
+}
+/*Tooltip ID separated from above:
+	- To be used on a far right object in website
+	- See #tooltipfarRight:hover #tooltipText*/
+#tooltipFarRight{
+	position: relative;
+	cursor: pointer;
+	padding: 7px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#tooltipText{
+	position: absolute;
+	Left: 50%
+	top: 0;
+	transform:translateX(-50%);
+	background-color: #dcedec;
+	color: #598946;
+	padding: 10px 15px;
+	border-radius: 7px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	min-width: 500px; 
+			
+}
+
+/*Event Handling Thing*/
+	
+#tooltip:hover #tooltipText{
+	position: absolute;
+	top: -50%;
+	right: -150%;
+	visibility: visible;
+	opacity: 1;
+}
+/* This is for the images/text need to hover information where their location is far right */
+#tooltipFarRight:hover #tooltipText{
+	position: absolute;
+	top: -50%;
+	visibility: visible;
+	opacity: 1;
+}

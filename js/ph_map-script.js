@@ -132,7 +132,3 @@ $(document).ready(function(){
 // 	$("select#provinces option").remove();
 // 	$("select#city_or_municipalities option").remove();
 // }
-
- 
-
-

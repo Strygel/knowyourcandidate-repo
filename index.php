@@ -4,10 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>KnowYourCandidate</title>
-        <link rel="stylesheet" href="css/design.css">
+        <link rel="stylesheet" href="css/index-design.css">
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/index-scripts.js"></script>
     </head>
     
     <body>
+        <div class="testing"></div>
     </body>
 </html>
 <!-- ================ KnowYourCandidate-repo project ========================

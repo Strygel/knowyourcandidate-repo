@@ -39,6 +39,9 @@
                     <label for="candidate"> Candidate: </label> <br>
                     <input type='text' name="candidate" id="candidate" class="small_textbox" required> <br> <br>
 
+                    <label for="partylist"> Partylist: </label> <br>
+                    <input type="text" name="partylist" id="partylist" class="small_textbox" required> <br> <br>
+
                     <label for="file"> Picture: </label> <br>
                     <input type='file' name="fileToUpload" id="fileToUpload" required> <br> <br>
 

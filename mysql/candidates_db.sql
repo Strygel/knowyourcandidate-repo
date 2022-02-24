@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2022 at 01:49 PM
+-- Generation Time: Feb 24, 2022 at 04:11 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `governor_candidates` (
   `id` int(255) NOT NULL,
   `candidate` varchar(255) NOT NULL,
+  `partylist` varchar(255) NOT NULL,
   `picture_dir` text NOT NULL,
   `nickname` varchar(255) NOT NULL,
   `age` int(255) NOT NULL,
@@ -51,6 +52,7 @@ CREATE TABLE `governor_candidates` (
 CREATE TABLE `mayor_candidates` (
   `id` int(255) NOT NULL,
   `candidate` varchar(255) NOT NULL,
+  `partylist` varchar(255) NOT NULL,
   `picture_dir` text NOT NULL,
   `nickname` varchar(255) NOT NULL,
   `age` int(255) NOT NULL,
@@ -73,6 +75,7 @@ CREATE TABLE `mayor_candidates` (
 CREATE TABLE `pres_candidates` (
   `id` int(255) NOT NULL,
   `candidate` varchar(255) NOT NULL,
+  `partylist` varchar(255) NOT NULL,
   `picture_dir` text NOT NULL,
   `nickname` varchar(255) NOT NULL,
   `age` int(255) NOT NULL,
@@ -95,6 +98,7 @@ CREATE TABLE `pres_candidates` (
 CREATE TABLE `vcpres_candidates` (
   `id` int(255) NOT NULL,
   `candidate` varchar(255) NOT NULL,
+  `partylist` varchar(255) NOT NULL,
   `picture_dir` text NOT NULL,
   `nickname` varchar(255) NOT NULL,
   `age` int(255) NOT NULL,
@@ -156,7 +160,7 @@ ALTER TABLE `mayor_candidates`
 -- AUTO_INCREMENT for table `pres_candidates`
 --
 ALTER TABLE `pres_candidates`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `vcpres_candidates`

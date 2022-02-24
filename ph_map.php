@@ -6,7 +6,7 @@
 		<title>KnowYourCandidate</title>
 
         <!-- <link rel="stylesheet" href="ph_map/chosen_v1.8.7/chosen.css"> -->
-        <link rel="stylesheet" href="css/ph_mapTEST-design.css">
+        <link rel="stylesheet" href="css/ph_map-design.css">
 
         <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <!-- <script type="text/javascript" src="ph_map/chosen_v1.8.7/chosen.jquery.min.js"></script> -->
@@ -17,8 +17,8 @@
         <!-- <script type="text/javascript" src="ph_map/search.js"></script> -->
         <!-- <script type="text/javascript" src="ph_map/select.js"></script> -->
 
-        <script type="text/javascript" src="snippets/ph_mapTEST_functions.js"></script>
-        <script type="text/javascript" src="js/ph_mapTEST-script.js"></script>
+        <script type="text/javascript" src="snippets/ph_map_functions.js"></script>
+        <script type="text/javascript" src="js/ph_map-script.js"></script>
 
 
     </head>
@@ -29,6 +29,8 @@
             <select id="provinces"></select>
             <select id="city_or_municipalities"></select>
             <!-- <p class="details">Selected: <span id="clicked_state"></span></p> -->
+
+            <!-- This section is for loading the map of the Philippines -->
             <p class="details">MySQL Code: <span id="mysql_code"></span></p>
         </div>
         <div id='map'></div>

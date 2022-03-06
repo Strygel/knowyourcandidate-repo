@@ -21,48 +21,36 @@
 
 </head>
 
+<!--landing page-->
 <body>
-	<!-- Header -->
+	<!-- Header-->
 	
 	<div class="container-fluid">
 		<div class="header">
 		<div class="row">
-			<div class="col-md-3">	
+			<!--<div class="col-md-3">	
 				<br>
 				<p class="headerTitle">knowyourcandidate.com<p>
-			</div>
-			<div class="col-md-3">	
-				<br>
-				<form id="form">
-				<input type="search" id="query" name="q" placeholder="Search...">
-				<button>Search</button>
-			</div>
-			<div class = "col-md-2">
-				<br>
-				<a href = "index.html" class = "noHTMLLineTextDecoration">
-					<p class="sectionHeaderStyling">HOME</p>
-				</a>
-			</div>
-			<div
-			<div class = "col-md-2">
-				<br>
-				<div class = "dropdown">
-				<button class ="dropDownButtonMat">CANDIDATE</button>
-				<div class = "dropdown-content">
-					<a href = "president.html" class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">President</p></a>
-					<a href = "vice-president.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Vice President</p></a>
-					<a href = "mayor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Mayor</p></a>
-					<a href = "governor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Governor</p></a>
-				</div>
-				</div>
-			</div>
-			<div class = "col-md-2">
-				<br>
-				<a href = "about-us.html" class = "noHTMLLineTextDecoration">
-					<p class="sectionHeaderStyling">ABOUT US</p>
-				</a>
-			</div>
-			
+			</div>-->
+			<nav class = "nav-bar">
+				<p class="headerTitle">knowyourcandidate.com</p>
+				<ul>
+					<li><a href="#home" class = "nav-link">Home</a></li>
+					<li><a href="#candidates">Candidates</a>
+						<ul>
+							<li><a href="president.html" class="nav-link">Presidents</a></li>
+							<li><a href="vice-president.html" class="nav-link">Vice Presidents</a></li>
+							<li><a href="mayor.html" class="nav-link">Mayors</a></li>
+							<li><a href="governor.html" class="nav-link">Governors</a></li>
+							<li><a href="senators.html" class="nav-link">Senators</a></li>
+						</ul>
+					</li>
+					<li><a href="#about_us">About Us</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+			</div> 
 		</div>
 		</div>
 	</div>
@@ -71,57 +59,68 @@
 	
 	<!--Title-->
 	
-	<div class="container-fluid">
-	<div class = "content">
-		
-		<p class="Title"><img src= "ballot-box.png">Philippine 2022 Election</p>
-		<p class= "forTagline">Vote Wisely!</p>
-		
-
-		<p class="forOpeningText"> 
-		<br>
-		Candidates can be evaluated through their opinions on societal issues, their government experience and their leadership skills that they would bring to office, that is why it is must to provide the voters a credible information about the people who are running to become the nation's leaders. 
-		<br><br>
-		knowyourcandidate.com intends to assist voters in determining who is deserving of their vote by providing them a website that would show the candidates' stands on social issues, their academic history and credentials. The website will feature the presidential and vice presidential candidates, as well as those who are running for governors and mayors in their respective LGUs. 
-		</p>
-	</div>
-	</div>
+	<section id = "home">
+		<div class="container-fluid">
+			<div class = "content">
+				
+				<p class="Title"><img src= "ballot-box.png">Philippine 2022 Election</p>
+				<p class= "forTagline">Vote Wisely!</p>
+				<p class="forOpeningText"> 
+				<br>
+				Candidates can be evaluated through their opinions on societal issues, their government experience and their leadership skills that they would bring to office, that is why it is must to provide the voters a credible information about the people who are running to become the nation's leaders. 
+				<br><br>
+				<!--knowyourcandidate.com intends to assist voters in determining who is deserving of their vote by providing them a website that would show the candidates' stands on social issues, their academic history and credentials. The website will feature the presidential and vice presidential candidates, as well as those who are running for governors and mayors in their respective LGUs. 
+				much better if nasa about us--></p>
+			</div>
+			</div>
+			
+	</section>
 	
 	<br><br><br>
 	
-	<div class = "container-fluid">
-	<div class = "forOptionsNearFooter">
-	<div class = "row">
-	
-		<div class = "col-md-3">
-			<a href = "president.html" class = "noHTMLLineTextDecoration"> 
-			<img src = "president.png">
-			<p class = "subheadingTextHome subheadingTextSize subheadtextPres">President</p>
-			</a>
+	<section id = "candidates">
+		<div class = "container-fluid">
+			<div class = "forOptionsNearFooter">
+			<div class = "row">
 			
-		</div>
-		<div class = "col-md-3">
-			<a href = "vice-president.html" class = "noHTMLLineTextDecoration">
-			<img src = "vice-president.png">
-			<p class = "subheadingTextHome subheadingTextSize subheadtextVPres">Vice President</p>
-			</a>
-		</div>
-		<div class = "col-md-3">
-			<a href = "mayor.html" class = "noHTMLLineTextDecoration">
-			<img src = "mayor.png">
-			<p class = "subheadingTextHome subheadingTextSize subheadtextMayor">Mayor</p>
-			</a>
-		</div>
-		<div class = "col-md-3">
-			<a href = "governor.html" class = "noHTMLLineTextDecoration">
-			<img src = "governor.png">
-			<p class = "subheadingTextHome subheadingTextSize subheadtextGov">Governor</p>
-			</a>
-		</div>
-		
-	</div>
-	</div>
-	</div>
+				<div class = "col-md-3">
+					<a href = "president.html" class = "noHTMLLineTextDecoration"> 
+					<img src = "president.png">
+					<p class = "subheadingTextHome subheadingTextSize subheadtextPres">President</p>
+					</a>
+					
+				</div>
+				<div class = "col-md-3">
+					<a href = "vice-president.html" class = "noHTMLLineTextDecoration">
+					<img src = "vice-president.png">
+					<p class = "subheadingTextHome subheadingTextSize subheadtextVPres">Vice President</p>
+					</a>
+				</div>
+				<div class = "col-md-3">
+					<a href = "mayor.html" class = "noHTMLLineTextDecoration">
+					<img src = "mayor.png">
+					<p class = "subheadingTextHome subheadingTextSize subheadtextMayor">Mayor</p>
+					</a>
+				</div>
+				<div class = "col-md-3">
+					<a href = "governor.html" class = "noHTMLLineTextDecoration">
+					<img src = "governor.png">
+					<p class = "subheadingTextHome subheadingTextSize subheadtextGov">Governor</p>
+					</a>
+				</div>
+				<!--need updates here, new addittion to database-->
+				<div class = "col-md-3">
+					<a href = "governor.html" class = "noHTMLLineTextDecoration">
+					<img src = "governor.png">
+					<p class = "subheadingTextHome subheadingTextSize subheadtextGov">Senators</p>
+					</a>
+				</div>
+				
+			</div>
+			</div>
+			</div>
+	</section>
+	
 	
 	<br><br><br>
 	<br><br><br>
@@ -129,9 +128,13 @@
 	
 </body>
 
-<footer>
-	<h2 class = "forFooter"><img src = "jade-dragon-logo.png">Jade Dragons</h2>
-</footer>
+<section id="about_us">
+	<footer>
+		<p class = "forFooter">About Us</p>
+		<a href ="about-us.html" class = "forFooter"><img src = "jade-dragon-logo.png">Jade Dragon</a2>
+	</footer>
+	
+</section>
 
 <br><br><br>
 

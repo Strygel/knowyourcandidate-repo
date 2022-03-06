@@ -66,7 +66,7 @@ var provinces = {
     "Laguna": {isRegion: false, id: "PHL2566"},
     "Lanao Del Norte": {isRegion: false, id: "PHL2573"},
     "Lanao Del Sur": {isRegion: false, id: "PHL2574"},
-    "Leyte": {isRegion: false, id: "PHL2583"},
+    "Leyte": {isRegion: true, id: "11"},
     "Marinduque": {isRegion: false, id: "PHL2569"},
     "Maguindanao": {isRegion: true, id: "15"},
     "Masbate": {isRegion: false, id: "PHL2540"},

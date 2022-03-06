@@ -5,11 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Database Uploader</title>
         
-        <script src="../js/jquery-3.6.0.min.js"></script>
-
-        <script src="../js/db_displayUI-script.js"></script>
-        <script src="../snippets/dropdown_formLoader.js"></script>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -82,5 +77,10 @@
                 <!-- Data Loaded from jQuery to PHP and MySQL Database comes here-->
             </div>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="../js/db_displayUI-script.js"></script>
+        <script src="../snippets/dropdown_formLoader.js"></script>
     </body>
 </html>

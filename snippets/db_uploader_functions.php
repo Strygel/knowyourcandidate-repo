@@ -74,7 +74,7 @@
                 case 'REGION X (NORTHERN MINDANAO)': $fileName = $candidate . "-10"; break;
                 case 'REGION XI (DAVAO REGION)': $fileName = $candidate . "-11"; break;
                 case 'REGION XII (SOCCSKSARGEN)': $fileName = $candidate . "-12"; break;
-                case 'REGION XIII (Caraga)': $fileName = $candidate . "-13"; break;
+                case 'REGION XIII (CARAGA)': $fileName = $candidate . "-13"; break;
                 case 'NATIONAL CAPITAL REGION (NCR)': $fileName = $candidate . "-NCR"; break;
                 case 'CORDILLERA ADMINISTRATIVE REGION (CAR)': $fileName = $candidate . "-CAR"; break;
                 case 'BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO (BARMM)': $fileName = $candidate . "-BARMM"; break;

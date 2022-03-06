@@ -48,7 +48,7 @@
             case 'REGION X (NORTHERN MINDANAO)': return "10"; break;
             case 'REGION XI (DAVAO REGION)': return "11"; break;
             case 'REGION XII (SOCCSKSARGEN)': return "12"; break;
-            case 'REGION XIII (Caraga)': return "13"; break;
+            case 'REGION XIII (CARAGA)': return "13"; break;
             case 'NATIONAL CAPITAL REGION (NCR)': return "NCR"; break;
             case 'CORDILLERA ADMINISTRATIVE REGION (CAR)': return "CAR"; break;
             case 'BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO (BARMM)': return "BARMM"; break;

@@ -9,6 +9,14 @@
     //      city_or_municipalities : "BACARRA"
     // }) 
     //
+    // Example (for php):
+    //
+    // $_POST['table_selected'] = 'pres_candidates';
+    // $_POST['regions'] = 'REGION I (ILOCOS REGION)';
+    // $_POST['provinces'] = 'ILOCOS NORTE';
+    // $_POST['city_or_municipalities'] = 'BACARRA';
+    // include 'this php directory';
+    //
     // Meaning the #id will load the database from 'mayor_candidates' -> 'REGION I (ILOCOS REGION)' -> 'ILOCOS NORTE' -> 'BACARRA'
     //
     // For the keywords of locations, refer to the 'philippines_addr.sql' database or just look my dropdowns on the 'db_displayUI.php' since I already loaded them all there

@@ -17,6 +17,7 @@
 
 /*navigation bar*/
 .nav-bar{
+	width: 100%;
 	position: relative;
     height: 75px;
 	padding-bottom: 10px;
@@ -132,4 +133,48 @@
 	text-decoration: none
 }
 
-	
+/*vice and precidential candidates webpage*/
+.presidentials-img{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+}
+.presidentials-img ul{
+	float: left;
+	list-style: none;
+}
+
+.presidentials-img ul li{
+	float: left;
+    list-style: none;
+    position: relative;
+    padding: 0px 40px 0px 40px; 
+}
+
+.pres-row{
+	float: right;
+}
+
+.vice_presidentials-img{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.vice_presidentials-img ul{
+	float: left;
+	list-style: none;
+}
+
+.vice_presidentials-img ul li{
+	float: left;
+    list-style: none;
+    position: relative;
+    padding: 0px 55px 0px 55px; 
+}
+
+.vpres-row{
+	float: right;
+}
+
+

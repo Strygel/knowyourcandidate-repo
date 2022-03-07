@@ -34,6 +34,12 @@
                     <label for="candidate"> Candidate: </label> <br>
                     <input type='text' name="candidate" id="candidate" class="small_textbox" required> <br> <br>
 
+                    <label for="sex"> Sex: </label> <br>
+                    <input type="radio" name="sex" id="sex" value="Male" required>
+                    <label for="sex">Male</label>
+                    <input type="radio" name="sex" id="sex" value="Female" required>
+                    <label for="sex">Female</label> <br> <br>
+
                     <label for="partylist"> Partylist: </label> <br>
                     <input type="text" name="partylist" id="partylist" class="small_textbox" required> <br> <br>
 
@@ -53,10 +59,10 @@
                     <input type='text' name="hometown" id="hometown" required></input> <br> <br>
 
                     <label for="honorary_degree"> Honorary Degree:</label> <br>
-                    <textarea type='text' name="honorary_degree" id="honorary_degree" required></textarea> <br> <br>
+                    <textarea type='text' name="honorary_degree" id="honorary_degree" class="textbox" required></textarea> <br> <br>
 
                     <label for="tertiary"> Tertiary:</label> <br>
-                    <input type='text' name="tertiary" id="tertiary" required></input> <br> <br>
+                    <textarea type='text' name="tertiary" id="tertiary" class="textbox" required></textarea> <br> <br>
 
                     <label for="political_background"> Political Background:</label> <br>
                     <textarea type='text' name="political_background" id="political_background" class="textbox" required></textarea> <br> <br>

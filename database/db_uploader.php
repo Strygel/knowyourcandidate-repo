@@ -39,6 +39,7 @@
         
         // ==============================================================
         $candidate = $_POST['candidate'];
+        $sex = $_POST['sex']; 
         $partylist = $_POST['partylist'];
         $nickname = $_POST['nickname'];
         $age = $_POST['age'];
@@ -77,9 +78,9 @@
 
                     $new_directory = fileName_editor($targetFilePath, $fileType, $directory, $table, $candidate);
 
-                    $sql = "INSERT INTO $table (candidate, partylist, picture_dir, nickname, age, birthdate, hometown, honorary_degree, tertiary, political_background, 
+                    $sql = "INSERT INTO $table (candidate, sex, partylist, picture_dir, nickname, age, birthdate, hometown, honorary_degree, tertiary, political_background, 
                     stance_divorce, stance_death_penalty, stance_same_sex_marriage) 
-                    VALUES ('$candidate', '$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', '$political_background', 
+                    VALUES ('$candidate', '$sex' ,'$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', '$political_background', 
                     '$stance_divorce', '$stance_death_penalty', '$stance_same_sex_marriage')";
                 break;
 
@@ -91,9 +92,9 @@
 
                     $new_directory = fileName_editor($targetFilePath, $fileType, $directory, $table, $candidate, $region, $province);
 
-                    $sql = "INSERT INTO $table (candidate, partylist, picture_dir, nickname, age, birthdate, hometown, honorary_degree, 
+                    $sql = "INSERT INTO $table (candidate, sex, partylist, picture_dir, nickname, age, birthdate, hometown, honorary_degree, 
                     tertiary, political_background, regions, provinces) 
-                    VALUES ('$candidate', '$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', 
+                    VALUES ('$candidate', '$sex', '$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', 
                     '$tertiary', '$political_background', '$region', '$province')";
                 break;
 
@@ -106,9 +107,9 @@
                     
                     $new_directory = fileName_editor($targetFilePath, $fileType, $directory, $table, $candidate, $region, $province, $city_or_municipality);
 
-                    $sql = "INSERT INTO $table (candidate, partylist, picture_dir, nickname, age, birthdate, hometown, honorary_degree, 
+                    $sql = "INSERT INTO $table (candidate, sex, partylist, picture_dir, nickname, age, birthdate, hometown, honorary_degree, 
                     tertiary, political_background, regions, provinces, city_or_municipalities) 
-                    VALUES ('$candidate', '$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', 
+                    VALUES ('$candidate', '$sex', '$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', 
                     '$political_background', '$region', '$province', '$city_or_municipality')";
                 break;
             }

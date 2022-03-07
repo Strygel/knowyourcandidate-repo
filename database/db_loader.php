@@ -74,16 +74,17 @@
 ?>  
             <div class='cells'>
                 <div class='candidate_card'>
-                    <img src='<?= $data[3] ?>' class='candidate_picture' width='100' height='100'>
+                    <img src='<?= $data[4] ?>' class='candidate_picture' width='100' height='100'>
                     <p class="candidate_name"><?= $data[1] ?></p>
-                    <p class="partylist"><span class="category">Partylist: </span><?= $data[2] ?></p>
-                    <p class="information"><span class="category">Nickname: </span><?= $data[4] ?></p>
-                    <p class="information"><span class="category">Age: </span><?= $data[5] ?></p>
-                    <p class="information"><span class="category">Birthdate: </span><?= $data[6] ?></p>
-                    <p class="information"><span class="category">Hometown: </span><?= $data[7] ?></p>
+                    <p class="partylist"><span class="category">Partylist: </span><?= $data[3] ?></p>
+                    <p class="information"><span class="category">Sex: </span><?= $data[2] ?></p>
+                    <p class="information"><span class="category">Nickname: </span><?= $data[5] ?></p>
+                    <p class="information"><span class="category">Age: </span><?= $data[6] ?></p>
+                    <p class="information"><span class="category">Birthdate: </span><?= $data[7] ?></p>
+                    <p class="information"><span class="category">Hometown: </span><?= $data[8] ?></p>
                     <ul class="information"><span class="category">Honorary Degree: </span>
 <?php 
-            $list = explode("|", $data[8]);
+            $list = explode("|", $data[9]);
             foreach ($list as $bullet) {
 ?>
                         <li class="bullet"><?= $bullet ?></li>
@@ -91,26 +92,44 @@
             }
 ?>
                     </ul>
-                    <p class="information"><span class="category">Tertiary: </span><?= $data[9] ?></p>
-                    <p class="paragraph"><span class="category">Political Background: </span><?= $data[10] ?></p> 
+                    <ul class="information"><span class="category">Tertiary: </span>
+<?php
+            $list = explode("|", $data[10]);
+            foreach ($list as $bullet) {
+?>
+                        <li class="bullet"><?= $bullet ?></li>
+<?php
+            }
+?>
+                    </ul>
+                    <ul class="information"><span class="category">Political Backgrounud: </span>
+<?php
+            $list = explode("|", $data[11]);
+            foreach ($list as $bullet) {
+?>
+                        <li class="bullet"><?= $bullet ?></li>
+<?php
+            }
+?>
+                    </ul>
 <?php
             if ($table == "pres_candidates" || $table == "vcpres_candidates") {
 ?>
-                    <p class="stance"><span class="category">Divorce: </span><?= $data[11] ?></p>
-                    <p class="stance"><span class="category">Death Penalty: </span><?= $data[12] ?></p>
-                    <p class="stance"><span class="category">Same Sex Marriage: </span><?= $data[13] ?></p>
+                    <p class="stance"><span class="category">Divorce: </span><?= $data[12] ?></p>
+                    <p class="stance"><span class="category">Death Penalty: </span><?= $data[13] ?></p>
+                    <p class="stance"><span class="category">Same Sex Marriage: </span><?= $data[14] ?></p>
 
 <?php
             }
             // Note: You can comment out this section if you don't want to display it onscreen the specific regions and cities of every mayors and governors 
             elseif ($table == "governor_candidates" || $table == "mayor_candidates") {
 ?>
-                    <p class="location"><span class="category">Region: </span><?= $data[11] ?></p>
-                    <p class="location"><span class="category">Province: </span><?= $data[12] ?></p>
+                    <p class="location"><span class="category">Region: </span><?= $data[12] ?></p>
+                    <p class="location"><span class="category">Province: </span><?= $data[13] ?></p>
 <?php
                 if (array_key_exists(13, $data)) {
 ?>
-                    <p class="location"><span class="category">City or Municipality: </span><?= $data[13] ?></p>
+                    <p class="location"><span class="category">City or Municipality: </span><?= $data[14] ?></p>
 <?php
                 }
             }

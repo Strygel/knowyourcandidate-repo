@@ -93,6 +93,7 @@
 	font-weight: bolder;
 	text-align: right;
 }	
+
 .Title{
 	text-align: center;
 	font-size: 75px;
@@ -139,6 +140,7 @@
 	margin-top: 50px;
 	text-align: center;
 }
+
 .presidentials-img ul{
 	float: left;
 	list-style: none;
@@ -175,6 +177,16 @@
 
 .vpres-row{
 	float: right;
+}
+
+/*candidate page*/
+
+.candidate-name{
+	font-size: 30px;
+}
+
+input{
+	border: 0;
 }
 
 

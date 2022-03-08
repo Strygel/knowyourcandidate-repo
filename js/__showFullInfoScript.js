@@ -1,12 +1,12 @@
-var information = document.getElementById("information");
-var button = document.getElementById("show-info");
+// var information = document.getElementById("information");
+// var button = document.getElementById("show-info");
 
-button.onclick = function(){
-	if(information.className == "open"){
-		information.className = "";
+// button.onclick = function(){
+// 	if(information.className == "open"){
+// 		information.className = "";
 		
-	}
-	else{
-		information.className = "open";
-	}
-};
+// 	}
+// 	else{
+// 		information.className = "open";
+// 	}
+// };

@@ -1,6 +1,6 @@
 <!-- This code will load the candidates in a 'block selection' form which will only load the picture of candidate, its name and the partylist it belongs to. -->
 
-<ul class="row nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+<div class="row mb-3 justify-content-center">
 		<?php
             include '../snippets/url_id_encoder.php';
 			include '../database/db_connect.php';
@@ -44,7 +44,7 @@
                 break;
             }
             
-            if ($sql) {
+            if (isset($sql)) {
                 $id_button = array();
                 $candidate_name = array();
             
@@ -63,17 +63,29 @@
                     array_push($id_button, $a);
                     array_push($candidate_name, $data[0]);
 		?>
-				<li class="nav-item col-lg-3 col-sm-6 " role="presentation">
-					<button value="<?= $data[0] ?>" class="cand_selector nav-link mx-auto" id="<?= $a ?>" data-bs-toggle="pill" 
-					type="button" role="tab" aria-controls="<?= $a ?>" aria-selected="true" onclick="window.location.href = '#cand_content'; window.history.pushState('','','?id=<?= $a ?>')">
-						<img src="<?= $data[1] ?>" alt="" width="150px" height="150px">
-						<p style="margin-bottom: 0px; font-weight: bold;"><?= $data[0] ?></p>
-                        <p style="font-style: italic;"><?= $data[2] ?></p>
-					</button>
-				</li>
+				<div class="col-lg-3 col-sm-6 text-center"> <figure class="lh-sm">
+                    <a href=""> 
+                        <img src="<?= $data[1] ?>" alt="<?= $data[0] ?>" style="width:160px"> 
+                    </a>
+                    <figcaption class="fs-3 fw-bold" 
+                        style="color: #598946; font-family: 'Times New Roman', Times, serif"> 
+                        <?= $data[0] ?> 
+                    </figcaption>
+                    <figcaption class="fs-5 fst-italic fw-lighter" 
+                        style="color: #598946; font-family: 'Times New Roman', Times, serif"> 
+                        <?= $data[2] ?> 
+                    </figcaption>
+                </figure> </div>
 		<?php   
 			    }
             }
             mysqli_close(candidates_db());
 		?>
-</ul>
+</div>
+
+<!-- <button value="<?= $data[0] ?>" class="cand_selector nav-link mx-auto" id="<?= $a ?>" data-bs-toggle="pill" 
+					type="button" role="tab" aria-controls="<?= $a ?>" aria-selected="true" onclick="window.location.href = '#cand_content'; window.history.pushState('','','?id=<?= $a ?>')">
+						<img src="<?= $data[1] ?>" alt="" width="150px" height="150px">
+						<p style="margin-bottom: 0px; font-weight: bold;"><?= $data[0] ?></p>
+                        <p style="font-style: italic;"><?= $data[2] ?></p>
+					</button> -->

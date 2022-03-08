@@ -19,7 +19,9 @@ function remove_stance() {
     $("label[for=stance_death_penalty]").remove();
     $("label[for=stance_same_sex_marriage]").remove();
 
-    $("input[type=radio]").remove();
+    $("input#stance_divorce").remove();
+    $("input#stance_death_penalty").remove();
+    $("input#stance_same_sex_marriage").remove();
     $(".blank").remove();
 }
 

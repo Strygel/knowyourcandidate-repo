@@ -10,49 +10,69 @@
 	<!-- CSS Style -->
 	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
 	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
+
+	<style>
+		body{
+		background-image: url('background/webpage-background.png');
+		margin-left: 20px;
+		margin-right: 20px;
+		}
+		/*footer{
+		background-image: url('background/footer-background.png');
+		}*/
+	</style>
 	
 </head>
 
 <body>
 	<!-- Header-->
 	
-	<div class="container-fluid">
-		<div class="header">
-		<div class="row">
-			<!--<div class="col-md-3">	
-				<br>
-				<p class="headerTitle">knowyourcandidate.com<p>
-			</div>-->
-			<nav class = "nav-bar">
-				<p class="headerTitle">knowyourcandidate.com</p>
-				<ul>
-					<li><a href="index.html" class = "nav-link">Home</a></li>
-					<li><a href="index.html#candidates">Candidates</a>
-						<ul>
-							<li><a href="president.html" class="nav-link">Presidents</a></li>
-							<li><a href="vice-president.html" class="nav-link">Vice Presidents</a></li>
-							<li><a href="mayor.html" class="nav-link">Mayors</a></li>
-							<li><a href="governor.html" class="nav-link">Governors</a></li>
-						</ul>
-					</li>
-					<li><a href="about-us.html">About Us</a></li>
-				</ul>
-			</nav>
-		</div>
-		</div>
-			</div> 
-		</div>
-		</div>
+	<div id="header_UI">
+		<!-- Codes for Navigation Bar located in snippets/header.html -->
 	</div>
 	
 	<br><br><br>
 
 <!--------------------------------------------------------------------------------------------->
-	<div class = "content">
-	<p class = "forContent"> This is Mayor Section </p>
-	</div>
+	<h1 class= "Title">Mayor Candidates</h1>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<br><br><br>
+
+	<div class="container-fluid">
+		<div class="row justify-content-center" style="height: 50px;">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+				<select name="" id="regions" class="form-select">
+
+				</select>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+			<select name="" id="provinces" class="form-select">
+
+			</select>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+				<select name="" id="city_or_municipalities" class="form-select">
+
+				</select>
+			</div>
+		</div>
+		<hr class="sep">
+		<div class="row justify-content-start my-4">
+			<div class="panel-1 col-lg-4 col-md-4 col-sm-12 col-12">
+				<div id="map"></div>
+			</div>
+			<div class="panel-2 col-lg-8 col-md-8 col-sm-12 col-12">
+				<div><p class="sub_title" style="text-align: center;"></p></div>
+				<div id="cand_panel">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../js/mayor-scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 

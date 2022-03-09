@@ -27,49 +27,12 @@
 
 <body>
 	<!-- Header -->
-	
-	<div class="container-fluid">
-		<div class="header">
-		<div class="row">
-			<div class="col-md-3">	
-				<br>
-				<p class="headerTitle">knowyourcandidate.com<p>
-			</div>
-			<div class="col-md-3">	
-				<br>
-				<form id="form">
-				<input type="search" id="query" name="q" placeholder="Search...">
-				<button>Search</button>
-			</div>
-			<div class = "col-md-2">
-				<br>
-				<a href = "index.html" class = "noHTMLLineTextDecoration">
-					<p class="sectionHeaderStyling">HOME</p>
-				</a>
-			</div>
-		
-			<div class = "col-md-2">
-				<br>
-				<div class = "dropdown">
-				<button class ="dropDownButtonMat">CANDIDATE</button>
-				<div class = "dropdown-content">
-					<a href = "president.html" class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">President</p></a>
-					<a href = "vice-president.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Vice President</p></a>
-					<a href = "mayor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Mayor</p></a>
-					<a href = "governor.html"class = "noHTMLLineTextDecoration"><p class= "dropButtonMenu">Governor</p></a>
-				</div>
-				</div>
-			</div>
-			<div class = "col-md-2">
-				<br>
-				<a href = "about-us.html" class = "noHTMLLineTextDecoration">
-					<p class="sectionHeaderStyling">ABOUT US</p>
-				</a>
-			</div>
-			
-		</div>
-		</div>
+	<!-- Header-->
+
+	<div id="header_UI">
+		<!-- Codes for Navigation Bar located in snippets/header.html -->
 	</div>
+	<br>	
 	
 	<br><br><br>
 	
@@ -83,13 +46,11 @@
 			<div class = "col-md-5">
 			<!--image-logo-->
 			<!--need to rework-->
-			<center>
-			<img src = "jade-dragon-logo.png"
+			
+			<img class="align-content-center ms-5" src = "images/jade-dragon-logo.png"
 			style = width:200px;
-					height:200px;
-					
-			>
-			<center>
+					height:200px;>
+			
 			
 			<h1><center>Jade Dragon</center></h1>
 			<p>Jade Dragon is a startup software development firm based in Manila. Philippines They are experts in creating well-designed and functional websites 
@@ -103,7 +64,7 @@
 			<div class = "row">
 				<div class = "col-md-6">
 					<center>
-					<img src = "template-face.png"
+					<img src = "images/template-face.png"
 					style = width:200px;
 					height:200px;
 					>
@@ -115,7 +76,7 @@
 				
 				<div class = "col-md-6">
 					<center>
-					<img src = "template-face.png"
+					<img src = "images/template-face.png"
 					style = width:200px;
 					height:200px;
 					>
@@ -127,7 +88,7 @@
 				
 				<div class = "col-md-6">
 					<center>
-					<img src = "template-face.png"
+					<img src = "images/template-face.png"
 					style = width:200px;
 					height:200px;
 					>
@@ -139,7 +100,7 @@
 				
 				<div class = "col-md-6">
 					<center>
-					<img src = "template-face.png"
+					<img src = "images/template-face.png"
 					style = width:200px;
 					height:200px;
 					>
@@ -155,12 +116,17 @@
 			</div>
 		</div>
 		<br><br><br>
+	</div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../js/about-us-scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	
 
 </body>
 <footer>
 	<br>
-	<h2 class = "forFooter"><img src = "jade-dragon-logo.png">Jade Dragons</h2>
+	<h2 class = "forFooter"><img src = "images/jade-dragon-logo.png">Jade Dragons</h2>
 	<br>
 </footer>
 

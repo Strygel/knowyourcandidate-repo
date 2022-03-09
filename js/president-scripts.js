@@ -3,3 +3,8 @@ $(document).ready(function(){
         table_selected: "pres_candidates"
     });
 })
+
+$(document).ready(function() {
+    $("#header_UI").load("../snippets/header.html");
+    console.log(test);
+});

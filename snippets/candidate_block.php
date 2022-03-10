@@ -65,7 +65,7 @@
 		?>
 				<div class="col-lg-3 col-sm-6 text-center"> <figure class="lh-sm">
                     <a href=""> 
-                        <img src="<?= $data[1] ?>" alt="<?= $data[0] ?>" style="width:160px"> 
+                        <img src="<?= $data[1] ?>" alt="<?= $data[0] ?>" style="width:200px; height: 200px; border-radius:50%"> 
                     </a>
                     <figcaption class="fs-3 fw-bold" 
                         style="color: #598946; font-family: 'Times New Roman', Times, serif"> 

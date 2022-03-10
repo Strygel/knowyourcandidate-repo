@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2022 at 07:09 AM
+-- Generation Time: Mar 10, 2022 at 03:27 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -60,8 +60,8 @@ CREATE TABLE `mayor_candidates` (
   `age` int(255) NOT NULL,
   `birthdate` date NOT NULL,
   `hometown` varchar(255) NOT NULL,
-  `honorary_degree` varchar(255) NOT NULL,
-  `tertiary` varchar(255) NOT NULL,
+  `honorary_degree` text NOT NULL,
+  `tertiary` text NOT NULL,
   `political_background` text NOT NULL,
   `regions` varchar(255) NOT NULL,
   `provinces` varchar(255) NOT NULL,
@@ -84,8 +84,8 @@ CREATE TABLE `pres_candidates` (
   `age` int(255) NOT NULL,
   `birthdate` date NOT NULL,
   `hometown` varchar(255) NOT NULL,
-  `honorary_degree` varchar(255) NOT NULL,
-  `tertiary` varchar(255) NOT NULL,
+  `honorary_degree` text NOT NULL,
+  `tertiary` text NOT NULL,
   `political_background` text NOT NULL,
   `stance_divorce` varchar(255) NOT NULL,
   `stance_death_penalty` varchar(255) NOT NULL,
@@ -108,8 +108,8 @@ CREATE TABLE `vcpres_candidates` (
   `age` int(255) NOT NULL,
   `birthdate` date NOT NULL,
   `hometown` varchar(255) NOT NULL,
-  `honorary_degree` varchar(255) NOT NULL,
-  `tertiary` varchar(255) NOT NULL,
+  `honorary_degree` text NOT NULL,
+  `tertiary` text NOT NULL,
   `political_background` text NOT NULL,
   `stance_divorce` varchar(255) NOT NULL,
   `stance_death_penalty` varchar(255) NOT NULL,

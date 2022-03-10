@@ -21,7 +21,7 @@ function toMySQLcode(table, region, province = null, city_or_municipality = null
     }
 }
 
-var provinces = {
+var provincesMap = {
     "Abra": {isRegion: false, id: "PHL2542"},
     "Agusan Del Norte": {isRegion: true, id: "12"},
     "Agusan Del Sur": {isRegion: false, id: "PHL2588"},
@@ -106,7 +106,7 @@ var provinces = {
 };
 
 // Only applicable for Metro Manila only
-var city_or_municipalities = {
+var city_or_municipalitiesMap = {
     "City Of Manila": "PHL5543",
     "City Of Mandaluyong": "PHL5542",
     "City Of Marikina": "PHL5550",

@@ -73,6 +73,13 @@
                         $directory = directory_editor('vc_presidents');
                     }
 
+                    ?>
+                    <script>
+                        console.log(<?= $sql ?>)
+                    </script>
+
+                    <?php
+
                     $targetFilePath = $directory . "/" . $fileName;
                     move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $targetFilePath);
 
@@ -82,6 +89,7 @@
                     stance_divorce, stance_death_penalty, stance_same_sex_marriage) 
                     VALUES ('$candidate', '$sex' ,'$partylist', '$new_directory', '$nickname', '$age', '$birthdate', '$hometown', '$honorary_degree', '$tertiary', '$political_background', 
                     '$stance_divorce', '$stance_death_penalty', '$stance_same_sex_marriage')";
+
                 break;
 
                 case 'governor_table':

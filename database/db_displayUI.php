@@ -78,7 +78,7 @@
                 </form>
             </div>
             <div id="panel_2">
-                <?php include "db_remover.php"; ?>
+                <?php include "db_uploader.php"; ?>
 
                 <!-- Data Loaded from jQuery to PHP and MySQL Database comes here-->
             </div>

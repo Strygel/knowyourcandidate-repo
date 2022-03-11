@@ -8,20 +8,11 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 	<!-- CSS Style -->
-	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
-	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
-
-	<style>
-		body{
-		background-image: url('background/webpage-background.png');
-		/*margin-left: 20px;
-		margin-right: 20px;
-		}
-		/*footer{
-		background-image: url('background/footer-background.png');
-		}*/
-		}
-	</style>
+	<!-- <link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
+	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'> -->
+	<link rel='stylesheet' type='text/css' href='../css/main-design.css'>
+	<link rel='stylesheet' type='text/css' href='../css/candidate_info-design.css'>
+	<link rel='stylesheet' type='text/css' href='../css/gov_mayor_design.css'>
 	
 </head>
 
@@ -32,36 +23,38 @@
 		<!-- Codes for Navigation Bar located in snippets/header.html -->
 	</div>
 	
-	<br>
+	<br><br><br>
 
 <!--------------------------------------------------------------------------------------------->
-	<h1 class= "Title">Mayor Candidates</h1>
+	<h1 id="title">Mayor Candidates</h1>
 
-	<div class="container-fluid">
-		<div class="row justify-content-center" style="height: 50px;">
+	<div class="container-fluid px-0">
+		<div class="row justify-content-center mb-lg-1 mb-sm-1 mb-5" style="height: 50px;">
 			<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
 				<select name="" id="regions" class="form-select">
 
 				</select>
 			</div> -->
-			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-sm-1 mb-1">
 			<select name="" id="provinces" class="form-select">
 
 			</select>
 			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 				<select name="" id="city_or_municipalities" class="form-select">
 
 				</select>
 			</div>
 		</div>
-		<hr class="sep">
-		<div class="row justify-content-start my-4">
+		<div class="row m-0">
+			<hr class="sep">
+		</div>
+		<div class="row justify-content-start" style="margin: unset">
 			<div class="panel-1 col-lg-4 col-md-4 col-sm-12 col-12">
 				<div id="map"></div>
 			</div>
 			<div class="panel-2 col-lg-8 col-md-8 col-sm-12 col-12"> <!--list of candidates here beside map-->
-				<div><p class="sub_title" style="text-align: center;"></p></div>
+				<br>
 				<div id="cand_panel">
 				
 				</div>
@@ -74,6 +67,11 @@
 	<div id="cand_content">
 			
 	</div>
+
+	<footer>
+		<!--p class = "forFooter"></p-->
+		<a href ="about-us.html" class = "forFooter"><img src = "images/jade-dragon-logo.png">Jade Dragon</a2>
+	</footer>
 
 	<script>
 		<?php

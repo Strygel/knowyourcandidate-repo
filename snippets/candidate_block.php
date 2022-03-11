@@ -64,15 +64,13 @@
                     array_push($candidate_name, $data[0]);
 		?>
             <li class="nav-item col-lg-3 col-sm-6 text-center" role="presentation">
-                <button value="<?= $data[0] ?>" class="cand_block nav-link mx-auto" id="<?= $a ?>" data-bs-toggle="pill" 
+                <button value="<?= $data[0] ?>" class="cand_block nav-link mx-auto px-0" id="<?= $a ?>" data-bs-toggle="pill" 
 					type="button" role="tab" aria-controls="<?= $a ?>" aria-selected="true" onclick="window.location.href = '#cand_content'; window.history.pushState('','','?id=<?= $a ?>')">
-						<img src="<?= $data[1] ?>" alt="<?= $data[0] ?>" style="width:200px; height: 200px; border-radius:50%">
-						<p class="fs-3 fw-bold mb-0" 
-                           style="color: #598946; font-family: 'Times New Roman', Times, serif">
+						<img src="<?= $data[1] ?>" alt="<?= $data[0] ?>" class="block_image">
+						<p class="block_name" >
                            <?= $data[0] ?>
                         </p>
-                        <p class="fs-5 fst-italic fw-lighter"
-                           style="color: #598946; font-family: 'Times New Roman', Times, serif">
+                        <p class="block_partylist">
                            <?= $data[2] ?>
                         </p>
                 </button>

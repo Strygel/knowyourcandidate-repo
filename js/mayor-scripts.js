@@ -52,7 +52,6 @@ $(document).ready(function() {
                             document.getElementById("provinces").value,
                             document.getElementById("city_or_municipalities").value);
                     })
-                    
                 });
             })
         }

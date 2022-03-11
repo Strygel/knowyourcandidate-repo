@@ -1,0 +1,23 @@
+.candidate-name {
+    color: #598946; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+.candidate-stance {
+    text-align: center;
+}
+
+.labels {
+    color: #598946;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #598946;
+    background-color: #e7f1ff;
+    box-shadow: inset 0 -1px 0 rgba(157, 212, 53, 0.13);
+}
+
+#cand_info {
+
+}

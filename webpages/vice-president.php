@@ -7,25 +7,15 @@
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-
 	<!-- CSS Style -->
-	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
+	<!-- <link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
 	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
 	<link rel='stylesheet' type='text/css' href='../css/__tooltip.css'>
 	<link rel='stylesheet' type='text/css' href='../css/__textStyling.css'>
-	<link rel='stylesheet' type='text/css' href='../css/__infoPopup.css'>
-	
-	<style>
-	body{
-	background-image: url('background/webpage-background.png');
-	/*margin-left: 20px;
-	margin-right: 20px;*/
-	}
-	footer{
-	background-image: url('background/footer-background.png');
-	}
-	</style>
-
+	<link rel='stylesheet' type='text/css' href='../css/__infoPopup.css'> -->
+	<link rel='stylesheet' type='text/css' href='../css/main-design.css'>
+	<link rel='stylesheet' type='text/css' href='../css/candidate_info-design.css'>
+	<link rel='stylesheet' type='text/css' href='../css/pres_vcpres_design.css'>
 </head>
 <!--navbar-->
 <body>
@@ -33,26 +23,25 @@
 	<div id="header_UI">
 		<!-- Codes for Navigation Bar located in snippets/header.html -->
 	</div>
-	<br>	
+	<br><br><br>
 
 <!-------------------------------------------------------------------------------------------------------------------------------->
-	<h1 class= "Title"> Vice Presidential Candidates</h1>
+	<h1 id="title"> Vice Presidential Candidates</h1>
 	<br>
 
 	<div class = "container-fluid" id="cand_selector">
 		<!-- Code is at ../snippets/candidate_block.php -->
 	</div>
-
-	<br><br>
-
 	
 	<div id="cand_content">
 		<!-- Code is at ../snippets/candidate_info.html -->
 	</div>
 	
-	<br><br><br>
-
-
+	<footer>
+		<!--p class = "forFooter"></p-->
+		<a href ="about-us.html" class = "forFooter"><img src = "images/jade-dragon-logo.png">Jade Dragon</a2>
+	</footer>
+	
 	<script>
 		<?php
 			include_once '../snippets/url_id_decoder.php';

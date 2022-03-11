@@ -9,42 +9,33 @@
 
 
 	<!-- CSS Style -->
-	<link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
-	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'>
-	
-	<style>
-		body{
-		background-image: url('background/webpage-background.png');
-		margin-left: 20px;
-		margin-right: 20px;
-		}
-		/*footer{
-		background-image: url('background/footer-background.png');
-		}*/
-	</style>
+	<link rel='stylesheet' type='text/css' href='../css/main-design.css'>
+	<link rel='stylesheet' type='text/css' href='../css/candidate_info-design.css'>
+	<link rel='stylesheet' type='text/css' href='../css/gov_mayor_design.css'>
 
+	<!-- <link rel='stylesheet' type='text/css' href='../css/__webpage-styling.css'>
+	<link rel='stylesheet' type='text/css' href='../css/__dropdown-menu.css'> -->
+	
 </head>
 
 <body>
 	<!-- Header-->
-	
 	<div id="header_UI">
 		<!-- Codes for Navigation Bar located in snippets/header.html -->
 	</div>
-	
-	<br>
+	<br><br><br>
 
 <!----------------------------------------------------------------------------------------------------------------------------------------->
-	<h1 class= "Title">Governor Candidates</h1>
+	<h1 id= "title">Governor Candidates</h1>
 
 	<div class="container-fluid">
 		<div class="row justify-content-center" style="height: 50px;">
-			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 				<select name="" id="regions" class="form-select">
 
 				</select>
 			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-12 my-4">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
 				<select name="" id="provinces" class="form-select">
 
 				</select>
@@ -65,6 +56,11 @@
 	<div class="container-fluid" id="cand_content">
 		
 	</div>
+
+	<footer>
+		<!--p class = "forFooter"></p-->
+		<a href ="about-us.html" class = "forFooter"><img src = "images/jade-dragon-logo.png">Jade Dragon</a2>
+	</footer>
 
 	<script>
 		<?php

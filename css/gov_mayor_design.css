@@ -1,0 +1,38 @@
+.block_image {
+    width: 100px; 
+    height: 100px; 
+    border-radius:50%
+}
+
+.cand_block, .cand_block:hover {
+    color: #598946; 
+    font-family: 'Times New Roman', Times, serif;
+    /* For the font and its sizes, it was on candidate_block.php itself */
+}
+
+.block_name {
+    font-weight: bold;
+    font-size: larger;
+
+    margin-bottom: 0px;
+
+}
+
+.block_partylist {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: small;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #598946;
+}
+
+/* .panel-1 {
+
+}
+
+.panel-2 {
+
+}  */

@@ -14,12 +14,13 @@
 	<style>
 		body{
 		background-image: url('background/webpage-background.png');
-		margin-left: 20px;
+		/*margin-left: 20px;
 		margin-right: 20px;
 		}
 		/*footer{
 		background-image: url('background/footer-background.png');
 		}*/
+		}
 	</style>
 	
 </head>

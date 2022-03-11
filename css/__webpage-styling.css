@@ -15,9 +15,6 @@
 }
 */
 
-/*navigation bar*/
-
-/*--*/
 
 .sectionHeaderStyling{
 	font-size:20px;
@@ -120,6 +117,15 @@
 
 input{
 	border: 0;
+}
+
+/*about us*/
+.aboutus_txt{
+	font-size: 30px;
+}
+
+.card{
+	padding-left: 5px;
 }
 
 

@@ -1,0 +1,16 @@
+img.card-img-top {
+    border-radius: 50%;
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+}
+
+#about_us{
+	text-align: center;
+}
+
+/*about us*/
+.aboutus_txt{
+	font-size: 30px;
+}
+

@@ -37,10 +37,6 @@
 	font-size: 25px;
 	color:#598946;
 }
-
-#about_us{
-	text-align: center;
-}
 	
 .noHTMLLineTextDecoration{
 	text-decoration: none
@@ -101,13 +97,5 @@ input{
 	border: 0;
 }
 
-/*about us*/
-.aboutus_txt{
-	font-size: 30px;
-}
-
-.card{
-	padding-left: 5px;
-}
 
 

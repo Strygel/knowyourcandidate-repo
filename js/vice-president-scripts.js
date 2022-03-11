@@ -1,5 +1,6 @@
 $(document).ready(function() {    
     $("#header_UI").load("../snippets/header.html");
+    $("#footer_UI").load("../snippets/footer.html");
 
     $("#cand_selector").load("../snippets/candidate_block.php", {
         table_selected: "vcpres_candidates",

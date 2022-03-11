@@ -4,6 +4,7 @@
 	<link rel="icon" href="images/jade-dragon-logo.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Know Your Candidate - Presidents</title>
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -36,13 +37,12 @@
 
 <!------------------------data input here------------------------------------not edited yet------------------------------------------------------------------------------------->
 	
-	<div class="container-fluid" id="cand_content">
+	<div class="container-fluid px-0" id="cand_content">
 		<!-- Code is at ../snippets/candidates_info.html -->
 	</div>
 	
-	<footer>
-		<!--p class = "forFooter"></p-->
-		<a href ="about-us.html" class = "forFooter"><img src = "images/jade-dragon-logo.png">Jade Dragon</a2>
+	<footer id="footer_UI" class="container-fluid">
+		<!-- Code is at ../snippets/footer.html -->
 	</footer>
 
 	<script>

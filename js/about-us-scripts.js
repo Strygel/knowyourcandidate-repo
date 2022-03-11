@@ -1,5 +1,5 @@
 
 $(document).ready(function() {
     $("#header_UI").load("../snippets/header.html");
-    console.log(test);
+    $("#footer_UI").load("../snippets/footer.html");
 });

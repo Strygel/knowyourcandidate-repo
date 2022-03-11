@@ -10,6 +10,7 @@ var placeholder_dropdown = "<option value='' disabled selected>Select your optio
 
 $(document).ready(function() {
     $("#header_UI").load("../snippets/header.html");
+    $("#footer_UI").load("../snippets/footer.html");
 
     $("#candidates-info_UI").load("../snippets/candidate_info.php")
 

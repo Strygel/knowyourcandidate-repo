@@ -8,11 +8,10 @@ var municipalities_directory = '../database/db_dropdown/db_dropdown-Municipaliti
 var placeholder_dropdown = "<option value='' disabled selected>Select your option</option>";
 
 $(document).ready(function() {
-
-
     var table = "governor_candidates";
 
     $("#header_UI").load("../snippets/header.html");
+	$("#footer_UI").load("../snippets/footer.html");
 
     // $("#mayor-gov-cand").load("../snippets/mayor-gov_cand.html");
 

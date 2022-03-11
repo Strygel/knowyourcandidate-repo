@@ -6,15 +6,23 @@ body {
     background-color: antiquewhite;
 }
 
+/* Footer Section */
+
 footer {
+    background-color: #e0eedd;
 	text-align: center;
-	color: aliceblue;
-    background-color: #598946;
-	height: 100px;
+	height: auto;
 }
 
 footer a, footer a:hover {
-	color: aliceblue;
+	color: #598946;
+	text-decoration: none;
+}
+
+#comp_section {
+	vertical-align: middle;
+	font-size: 25px;
+	font-weight: 500;
 }
 
 #title {
@@ -24,6 +32,16 @@ footer a, footer a:hover {
 	font-family: Times New Roman;
 	font-weight: bold;
 }
+
+#sources_section {
+
+}
+
+.sources {
+	text-decoration: underline;
+}
+
+/* ----------------------- */
 
 /* #cand_content {
     background-color: #c0e2b3; 

@@ -14,8 +14,15 @@
 
 .accordion-button:not(.collapsed) {
     color: #598946;
-    background-color: #e7f1ff;
-    box-shadow: inset 0 -1px 0 rgba(157, 212, 53, 0.13);
+    background-color: #c0e2b3;
+    box-shadow: inset 0 -1px 0 rgb(89, 137, 70);
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(137, 168, 124);
 }
 
 #cand_info {

@@ -84,11 +84,17 @@
 				<h class="candidate-name" style="vertical-align: top;"><?= $data[1] ?></h>
 			</div> 
 			<div class="border" style="height: auto;">
-				<div class="container-fluid mt-2 mb-2">
+				<div class="container-fluid">
 					<div class="row mt-3">
-						<div class="col-md-12 px-0">
-							<label class="labels">Partylist:</label>
-							<input class="col-md-7 ms-1" type="text" readonly class="form-control-plaintext" id="partylist" style="width: auto%;"value="<?= $data[3] ?>">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-lg-2 col-md-6 col-sm-6 col-6 px-0">
+									<p class="labels">Partylist:</p>
+								</div>
+								<div class="col-lg-10 col-md-6 col-sm-6 col-6 px-0">
+									<p class="data"><?= $data[3] ?></p>
+								</div>
+							</div>
 						</div>
 					</div>	
 					<div class="row mt-2">
@@ -99,34 +105,40 @@
 									<p class="labels mt-1">Age:</p>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-6 col-6 px-0">
-									<input class="ms-1" type="text" readonly class="form-control-plaintext" id="nickname" style="width: 80%" value="<?= $data[5] ?>"><br>
-									<input class="ms-1" type="text" readonly class="form-control-plaintext" id="age" style="width: 80%" value="<?= $data[6] ?>">
+									<p class="mb-1" id="nickname"><?= $data[5] ?></p>
+									<p class="mt-1" id="age"><?= $data[6] ?></p>
 								</div>
 								<div class="col-lg-2 col-md-6 col-sm-6 col-6 px-0">
 									<p class="labels mb-1">Sex:</p>
-									<p class="labels mt-1">Hometown:</p>
+									<p class="labels mt-1">Birthdate:</p>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-6 col-6 px-0">
-									<input class="col-md-7 ms-1" type="text" readonly class="form-control-plaintext" id="sex" style="width: 80%" value="<?= $data[2] ?>"><br>
-									<input class="col-md-7 ms-1" type="text" readonly class="form-control-plaintext" id="hometown" style="width: 80%" value="<?= $data[8] ?>">
+									<p class="mb-1" id="nickname"><?= $data[2] ?></p>
+									<p class="mt-1" id="age"><?= $data[7] ?></p>
 								</div>
 							</div>
 
+						</div>
+					</div>
+					<div class="row mt-2">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-lg-2 col-md-6 col-sm-6 col-6 px-0">
+									<p class="labels">Hometown:</p>
+								</div>
+								<div class="col-lg-10 col-md-6 col-sm-6 col-6 px-0">
+									<p class="data"><?= $data[8] ?></p>
+								</div>
+							</div>
 						</div>
 					</div>
 					<?php 
 						if ($table == "pres_candidates" || $table == "vcpres_candidates") {
 					?>
 					<div class="row mt-2 justify-content-center">
-						<!-- <label class="labels">Political Stand on Issues</label>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><label class="pol_issue me-2">Divorce:</label><?= $data[12] ?></li>
-							<li class="list-group-item"><label class="pol_issue me-2">Death Penalty:</label><?= $data[13] ?></li>
-							<li class="list-group-item"><label class="pol_issue me-2">Same Sex Marriage:</label><?= $data[14] ?></li>
-						</ul> -->
-						<div class="candidate-stance col-lg-4 col-sm-6 col-12">Divorce: <span><?= $data[12] ?></span></div>
-						<div class="candidate-stance col-lg-4 col-sm-6 col-12">Death Penalty: <span><?= $data[13] ?></span></div>
-						<div class="candidate-stance col-lg-4 col-sm-12 col-12">Same Sex Marriage: <span><?= $data[14] ?></span></div>
+						<div class="candidate-stance col-lg-4 col-sm-6 col-12"> <p class="labels">Divorce: <span style="color: black;"><?= $data[12] ?></span></p></div>
+						<div class="candidate-stance col-lg-4 col-sm-6 col-12"> <p class="labels">Death Penalty: <span style="color: black;"><?= $data[13] ?></span></p></div>
+						<div class="candidate-stance col-lg-4 col-sm-12 col-12"> <p class="labels">Same Sex Marriage: <span style="color: black;"><?= $data[14] ?></span></p></div>
 					</div>
 					<?php
 						}
@@ -211,79 +223,3 @@
     }
     mysqli_close(candidates_db());
 ?>
-
-				
-				
-				<!-- <div class="row mt-6">
-					<div class="container mt-5 mb-2">
-						<div class="col-xs-4">
-							<label class="labels">Honorary Degree:</label>
-							<ul class="list-group list-group-flush">
-							<?php
-									$list = explode("|", $data[9]);
-									foreach ($list as $bullet) {
-									?>
-										<li class="list-group-item ms-2"><?= $bullet ?></li>	
-									<?php
-									}
-								?>
-							</ul>
-						</div>	
-					</div>
-				</div>
-
-				
-				<div class="row mt-7">
-					<div class="container mt-2 mb-2">
-						<div class="col-md-6">
-							<label class="labels">Tertiary:</label>
-							<ul class="list-group list-group-flush">
-								<?php
-									$list = explode("|", $data[10]);
-									foreach ($list as $bullet) {
-									?>
-										<li class="list-group-item ms-2"><?= $bullet ?></li>	
-									<?php
-									}
-								?>
-							</ul>
-						</div>	
-					</div>
-				</div>
-
-				<div class="row mt-8">
-					<div class="container mt-2 mb-2">
-						<div class="col-md-6">
-							<label class="labels">Political Background:</label>
-							<ul class="list-group list-group-flush">
-								<?php
-									$list = explode("|", $data[11]);
-									foreach ($list as $bullet) {
-									?>
-										<li class="list-group-item ms-2"><?= $bullet ?></li>	
-									<?php
-									}
-								?>
-							</ul>
-						</div>	
-					</div>
-				</div>
-				
-				<?php 
-				if ($table == "pres_candidates" || $table == "vcpres_candidates") {
-				?>
-				<div class="row-mt-9">
-					<div class="container mt-2 mb-2">
-						<div class="col-md-6">
-							<label class="labels">Political Stand on Issues</label>
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item"><label class="pol_issue me-2">Divorce:</label><?= $data[12] ?></li>
-								<li class="list-group-item"><label class="pol_issue me-2">Death Penalty:</label><?= $data[13] ?></li>
-								<li class="list-group-item"><label class="pol_issue me-2">Same Sex Marriage:</label><?= $data[14] ?></li>
-							</ul>
-						</div>
-					</div> 
-				</div> -->
-				<?php
-				}
-				?>

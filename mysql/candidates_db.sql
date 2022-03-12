@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2022 at 03:42 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Mar 12, 2022 at 05:35 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,7 +92,7 @@ INSERT INTO `governor_candidates` (`id`, `candidate`, `sex`, `partylist`, `pictu
 (74, 'Angelina De Luna Tan', 'Female', 'Nationalist People`s Coalition', '../pictures/governors/REGION IV-A (CALABARZON)/QUEZON/Angelina De Luna Tan-04A_QUEZON_governor.png', 'Helen', 0, '0000-00-00', 'N/A', 'No Data Available', 'No Data Available', '2019-2020 – Chairperson, House Committee on Health | 2013-Present – Congresswoman', 'REGION IV-A (CALABARZON)', 'QUEZON'),
 (75, 'Presby Velasco ', 'Male', 'Partido Demokratiko Pilipino Lakas ng Bayan', '../pictures/governors/REGION IV-B (MIMAROPA)/MARINDUQUE/Presby Velasco -04B_MARINDUQUE_governor.png', 'N/A', 73, '1948-08-08', 'N/A', 'No Data Available', 'University of the Philippines', '2019-Present – National President, League of Provinces of the Philippines | 2019-Present – Governor, Marinduque | 2006-2018 – Associate Justice, Supreme Court | 1998-2001 – Associate Justice of the Philippine Court \r\nof Appeals | 1995-1998 – Undersecretary, Department of Justice', 'REGION IV-B (MIMAROPA)', 'MARINDUQUE'),
 (76, 'James Marinduqueño Lim', 'Male', 'Alliance for Barangay Concerns', '../pictures/governors/REGION IV-B (MIMAROPA)/MARINDUQUE/James Marinduqueño Lim-04B_MARINDUQUE_governor.png', 'N/A', 0, '0000-00-00', 'Santa Cruz, Marinduque', 'No Data Available', 'No Data Available', '2013-Present – Vice Governor | January, 2019 – June 30, 2019 – Governor', 'REGION IV-B (MIMAROPA)', 'MARINDUQUE'),
-(77, ' Nina Ricci Ynares', 'Female', 'Nationalist People`s Coalition', '../pictures/governors/REGION IV-A (CALABARZON)/RIZAL/ Nina Ricci Ynares-04A_RIZAL_governor.png', 'N/A', 0, '0000-00-00', 'N/A', 'No Data Available', 'Business Management Degree at De La Salle University, | Attended Law School at San Beda College of Law in 1993-1996', 'No Data Available', 'REGION IV-A (CALABARZON)', 'RIZAL'),
+(77, 'Nina Ricci Ynares', 'Female', 'Nationalist People`s Coalition', '../pictures/governors/REGION IV-A (CALABARZON)/RIZAL/Nina Ricci Ynares-04A_RIZAL_governor.png', 'N/A', 0, '0000-00-00', 'N/A', 'No Data Available', 'Business Management Degree at De La Salle University, | Attended Law School at San Beda College of Law in 1993-1996', 'No Data Available', 'REGION IV-A (CALABARZON)', 'RIZAL'),
 (78, 'Josephine Sato', 'Female', 'Liberal Party', '../pictures/governors/REGION IV-B (MIMAROPA)/OCCIDENTAL MINDORO/Josephine Sato-04B_OCCIDENTAL MINDORO_governor.png', 'Nene', 67, '1954-04-29', 'N/A', 'No Data Available', 'No Data Available', '1988 – 1992 - Vice Governor of Occidental Mindoro\r\n| 1992-2001, 2004-2013 - Governor of Occidental Mindoro | 2001 - 2004, 2013 - 2022 Philippine House of Representatives from Occidental Mindoro`s Lone District', 'REGION IV-B (MIMAROPA)', 'OCCIDENTAL MINDORO'),
 (79, 'Eduardo Gadiano', 'Male', 'Partido Demokratiko Pilipino Lakas ng Bayan', '../pictures/governors/REGION IV-B (MIMAROPA)/OCCIDENTAL MINDORO/Eduardo Gadiano-04B_OCCIDENTAL MINDORO_governor.png', 'N/A', 0, '0000-00-00', 'N/A', 'No Data Available', 'No Data Available', '2010-2013, 2013-2016, 2016-2019 - Mayor of \r\nSablayan, Mindoro Occidental', 'REGION IV-B (MIMAROPA)', 'OCCIDENTAL MINDORO'),
 (80, 'Humerlito Dolor', 'Male', 'Partido Demokratiko Pilipino Lakas ng Bayan', '../pictures/governors/REGION IV-B (MIMAROPA)/ORIENTAL MINDORO/Humerlito Dolor-04B_ORIENTAL MINDORO_governor.png', 'Bonz', 0, '0000-00-00', 'N/A', 'No Data Available', 'No Data Available', '2013-2016, 2016-2019 - Vice-Governor of Mindoro Oriental Province | 2010-2013 - Provincial Board Member of Mindoro \r\nOriental Province', 'REGION IV-B (MIMAROPA)', 'ORIENTAL MINDORO'),

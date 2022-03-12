@@ -64,6 +64,8 @@ $(document).ready(function() {
         },
         function() {
             $("select#city_or_municipalities").prepend(placeholder_dropdown);
+            
+            document.getElementById("cand_panel").innerHTML = '';
         });
 	});
 

@@ -74,7 +74,7 @@ $(document).ready(function() {
 			$("select#provinces").prepend(placeholder_dropdown);
 		});
 
-        document.getElementById("cand_panel").innerHTML = '<p id="placeholder">Select More Options...</p>';
+        document.getElementById("cand_panel").innerHTML = '';
 
 		// $("#cand_selector").load(block_directory, {
         //     table_selected: table,

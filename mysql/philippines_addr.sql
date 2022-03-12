@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2022 at 02:39 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.13
+-- Generation Time: Mar 12, 2022 at 03:42 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,7 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `philippines_addr`
 --
-
 
 -- --------------------------------------------------------
 
@@ -1393,20 +1392,6 @@ INSERT INTO `refcitymun` (`id`, `psgcCode`, `citymunDesc`, `regDesc`, `provCode`
 (1348, '128007000', 'MALUNGON', '12', '1280', '128007'),
 (1349, '129804000', 'COTABATO CITY', '12', '1298', '129804'),
 (1350, '133901000', 'CITY OF MANILA', '13', '1339', '133901'),
--- (1350, '133901000', 'TONDO I / II', '13', '1339', '133901'),
--- (1351, '133902000', 'BINONDO', '13', '1339', '133902'),
--- (1352, '133903000', 'QUIAPO', '13', '1339', '133903'),
--- (1353, '133904000', 'SAN NICOLAS', '13', '1339', '133904'),
--- (1354, '133905000', 'SANTA CRUZ', '13', '1339', '133905'),
--- (1355, '133906000', 'SAMPALOC', '13', '1339', '133906'),
--- (1356, '133907000', 'SAN MIGUEL', '13', '1339', '133907'),
--- (1357, '133908000', 'ERMITA', '13', '1339', '133908'),
--- (1358, '133909000', 'INTRAMUROS', '13', '1339', '133909'),
--- (1359, '133910000', 'MALATE', '13', '1339', '133910'),
--- (1360, '133911000', 'PACO', '13', '1339', '133911'),
--- (1361, '133912000', 'PANDACAN', '13', '1339', '133912'),
--- (1362, '133913000', 'PORT AREA', '13', '1339', '133913'),
--- (1363, '133914000', 'SANTA ANA', '13', '1339', '133914'),
 (1364, '137401000', 'CITY OF MANDALUYONG', '13', '1374', '137401'),
 (1365, '137402000', 'CITY OF MARIKINA', '13', '1374', '137402'),
 (1366, '137403000', 'CITY OF PASIG', '13', '1374', '137403'),
@@ -1717,7 +1702,6 @@ INSERT INTO `refprovince` (`id`, `psgcCode`, `provDesc`, `regCode`, `provCode`) 
 (4, '015500000', 'PANGASINAN', '01', '0155'),
 (5, '020900000', 'BATANES', '02', '0209'),
 (6, '021500000', 'CAGAYAN', '02', '0215'),
-(7, '023100000', 'ISABELA', '02', '0231'),
 (8, '025000000', 'NUEVA VIZCAYA', '02', '0250'),
 (9, '025700000', 'QUIRINO', '02', '0257'),
 (10, '030800000', 'BATAAN', '03', '0308'),
@@ -1771,14 +1755,12 @@ INSERT INTO `refprovince` (`id`, `psgcCode`, `provDesc`, `regCode`, `provCode`) 
 (58, '112300000', 'DAVAO DEL NORTE', '11', '1123'),
 (59, '112400000', 'DAVAO DEL SUR', '11', '1124'),
 (60, '112500000', 'DAVAO ORIENTAL', '11', '1125'),
-(61, '118200000', 'COMPOSTELA VALLEY', '11', '1182'),
 (62, '118600000', 'DAVAO OCCIDENTAL', '11', '1186'),
 (63, '124700000', 'COTABATO (NORTH COTABATO)', '12', '1247'),
 (64, '126300000', 'SOUTH COTABATO', '12', '1263'),
 (65, '126500000', 'SULTAN KUDARAT', '12', '1265'),
 (66, '128000000', 'SARANGANI', '12', '1280'),
 (67, '129800000', 'COTABATO CITY', '12', '1298'),
--- (68, '133900000', 'NCR, CITY OF MANILA, FIRST DISTRICT', '13', '1339'),
 (69, '133900000', 'NCR, FIRST DISTRICT', '13', '1339'),
 (70, '137400000', 'NCR, SECOND DISTRICT', '13', '1374'),
 (71, '137500000', 'NCR, THIRD DISTRICT', '13', '1375'),
@@ -1835,7 +1817,6 @@ INSERT INTO `refregion` (`id`, `psgcCode`, `regDesc`, `regCode`) VALUES
 (15, '130000000', 'NATIONAL CAPITAL REGION (NCR)', '13'),
 (16, '140000000', 'CORDILLERA ADMINISTRATIVE REGION (CAR)', '14'),
 (17, '150000000', 'BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO (BARMM)', '15');
-
 
 --
 -- Indexes for dumped tables

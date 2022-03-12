@@ -27,7 +27,7 @@ footer a, footer a:hover {
 
 #title {
     text-align: center;
-	font-size: 75px;
+	font-size: calc(100% + 4vw);
 	color: #598946;
 	font-family: Times New Roman;
 	font-weight: bold;

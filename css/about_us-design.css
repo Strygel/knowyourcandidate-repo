@@ -6,11 +6,13 @@ img.card-img-top {
 }
 
 #about_us{
-	text-align: center;
+	/* text-align: center; */
+
 }
 
 /*about us*/
 .aboutus_txt{
-	font-size: 30px;
+	font-size: calc(100% + 1vw);
+    text-align: center;
 }
 
